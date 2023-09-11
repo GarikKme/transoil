@@ -1,0 +1,58 @@
+.aboutUs {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 80px;
+
+  @media screen and (max-width: 992px) {
+    padding-top: 33px;
+  }
+
+  &__wrap-content {
+    padding-top: 100px;
+
+    h2 {
+      margin-bottom: 65px;
+    }
+
+    p {
+      max-width: 609px;
+      font-size: 18px;
+      margin-bottom: 15px;
+      line-height: 2;
+
+      span {
+        color: $blue;
+        font-weight: 700;
+      }
+
+      @media screen and (max-width: 992px) {
+        font-size: 16px;
+        line-height: 31px;
+      }
+    }
+
+    .btn {
+      margin: unset;
+      margin-top: 25px;
+      @media screen and (max-width: 992px) {
+        margin: 25px auto 0;
+      }
+    }
+  }
+
+  &__wrap-image {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    @media screen and (max-width: 1590px) {
+      max-width: 40%;
+    }
+    @media screen and (max-width: 1290px) {
+      max-width: 30%;
+      top: 150px;
+    }
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
+  }
+}

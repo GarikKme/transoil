@@ -39,3 +39,32 @@ function initScript() {
 }
 
 window.onload = initScript;
+
+
+//tabs on services screen
+
+const tabs = document.querySelectorAll('.tab-btn');
+const content = document.querySelectorAll('.content');
+
+
+function changeClass(el) {
+	// for (let i = 0; i < tabs.length; i++) {
+	// 	tabs[i].classList.remove('active');
+	// // }
+		el.classList.toggle('active');
+
+
+}
+
+tabs.forEach(item => {
+	item.addEventListener('click', (e) => {
+		const currentTab = e.target.dataset.btn;
+		changeClass(e.target);
+		for (let i = 0; i < content.length; i++) {
+			content[i].classList.remove('active');
+			if (content[i].dataset.content === currentTab) {
+				content[i].classList.add('active');
+			}
+		}
+	})
+})

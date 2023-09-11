@@ -1,39 +1,49 @@
 @font-face {
-	font-family: Poppins;
-	src: url(../fonts/Poppins-Bold.woff2) format("woff2"), url(../fonts/Poppins-Bold.woff) format("woff");
+	font-family: 'Kantumruy';
+	src: local('Kantumruy Regular'), local('Kantumruy-Regular'),
+		url('../fonts/Kantumruy-Regular.woff2') format('woff2'),
+		url('../fonts/Kantumruy-Regular.woff') format('woff'),
+		url('../fonts/Kantumruy-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Kantumruy';
+	src: local('Kantumruy Bold'), local('Kantumruy-Bold'),
+		url('../fonts/Kantumruy-Bold.woff2') format('woff2'),
+		url('../fonts/Kantumruy-Bold.woff') format('woff'),
+		url('../fonts/Kantumruy-Bold.ttf') format('truetype');
 	font-weight: 700;
-	font-display: swap;
-	font-style: normal
+	font-style: normal;
 }
 
 @font-face {
-	font-family: Poppins;
-	src: url(../fonts/Poppins-Light.woff2) format("woff2"), url(../fonts/Poppins-Light.woff) format("woff");
-	font-weight: 300;
-	font-display: swap;
-	font-style: normal
+	font-family: 'Exo 2';
+	src: local('Exo 2 Bold'), local('Exo-2-Bold'),
+	url('../fonts/Exo2-Bold.woff2') format('woff2'),
+	url('../fonts/Exo2-Bold.woff') format('woff'),
+	url('../fonts/Exo2-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
 }
 
 @font-face {
-	font-family: Poppins-LightItalic;
-	src: url(../fonts/Poppins-LightItalic.woff2) format("woff2"), url(../fonts/Poppins-LightItalic.woff) format("woff");
-	font-weight: 300;
-	font-display: swap;
-	font-style: normal
+	font-family: 'Exo 2';
+	src: local('Exo 2 Extra Bold'), local('Exo-2-Extra-Bold'),
+	url('../fonts/Exo2-ExtraBold.woff2') format('woff2'),
+	url('../fonts/Exo2-ExtraBold.woff') format('woff'),
+	url('../fonts/Exo2-ExtraBold.ttf') format('truetype');
+	font-weight: 800;
+	font-style: normal;
 }
 
 @font-face {
-	font-family: Poppins;
-	src: url(../fonts/Poppins-Medium.woff2) format("woff2"), url(../fonts/Poppins-Medium.woff) format("woff");
-	font-weight: 500;
-	font-display: swap;
-	font-style: normal
-}
-
-@font-face {
-	font-family: Poppins;
-	src: url(../fonts/Poppins-SemiBold.woff2) format("woff2"), url(../fonts/Poppins-SemiBold.woff) format("woff");
+	font-family: 'Exo 2';
+	src: local('Exo 2 Semi Bold'), local('Exo-2-Semi-Bold'),
+	url('../fonts/Exo2-SemiBold.woff2') format('woff2'),
+	url('../fonts/Exo2-SemiBold.woff') format('woff'),
+	url('../fonts/Exo2-SemiBold.ttf') format('truetype');
 	font-weight: 600;
-	font-display: swap;
-	font-style: normal
+	font-style: normal;
 }

@@ -49,3 +49,8 @@
   left: 0;
   top: 0;
 }
+@mixin pos-abr {
+  position: absolute;
+  right: 0;
+  top: 0;
+}

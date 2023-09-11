@@ -1,0 +1,40 @@
+.text-screen {
+  position: relative;
+  min-height: 280px;
+  overflow: hidden;
+  @media screen and (max-width: 992px) {
+    min-height: 220px;
+  }
+
+  p {
+    color: #E0E0E0;
+    font-size: 140px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: absolute;
+    white-space: nowrap;
+    @media screen and (max-width: 992px) {
+      font-size: 80px;
+    }
+  }
+
+  &__wrap-top {
+    top: -40px;
+    left: 50%;
+    animation: moveTextLeft 15s linear infinite alternate;
+    @media screen and (max-width: 992px) {
+      top: 0;
+      animation: moveTextLeft 7s linear infinite alternate;
+    }
+  }
+
+  &__wrap-botom {
+    right: 50%;
+    bottom: -40px;
+    animation: moveTextRight 15s linear infinite alternate;
+    @media screen and (max-width: 992px) {
+      bottom: 0;
+      animation: moveTextRight 7s linear infinite alternate;
+    }
+  }
+}

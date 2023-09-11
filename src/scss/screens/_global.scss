@@ -1,0 +1,104 @@
+.global {
+  position: relative;
+  padding-bottom: 50px;
+
+  .container {
+    @media screen and (max-width: 1280px) {
+      max-width: 100% !important;
+      padding: 0 !important;
+    }
+  }
+
+  h2 {
+    @media screen and (max-width: 1290px) {
+      text-align: center;
+      span.span-num {
+        left: 50%;
+        bottom: -104px;
+        transform: translate(-102%, -1%);
+      }
+    }
+  }
+
+  &-image {
+    position: absolute;
+    left: 0;
+    top: 100px;
+    @media screen and (max-width: 1290px) {
+      width: 100%;
+      top: 115px;
+      min-height: 608px;
+      max-height: 663px;
+    }
+    @media screen and (max-width: 992px){
+      min-height: 530px;
+      max-height: 548px;
+    }
+    @media screen and (max-width: 576px) {
+      top: 105px;
+      min-height: 522px;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__wrap-content {
+    align-self: flex-end;
+    border-radius: 60px 0px 0px 0px;
+    background: rgba(255, 255, 255, 0.80);
+    backdrop-filter: blur(6px);
+    padding: 120px 20px 50px 140px;
+    margin-top: 150px;
+    max-height: 620px;
+    @media screen and (max-width: 576px) {
+      padding: 95px 20px 13px 30px;
+    }
+
+    p {
+      position: relative;
+      color: $black;
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 115px;
+      max-width: 369px;
+      padding-left: 107px;
+      @media screen and (max-width: 1290px) {
+        margin-bottom: 67px;
+      }
+      @media screen and (max-width: 992px) {
+        margin-bottom: 47px;
+        padding-left: 50px;
+        font-size: 18px;
+      }
+
+      @media screen and (max-width: 992px){
+            max-width: 270px;
+      }
+
+      span {
+        color: $blue;
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      span.big-num {
+        color: #F6F6F6;
+        font-family: $font-exo;
+        font-size: 128px;
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        top: -71px;
+        line-height: 1em;
+        z-index: -1;
+        @media screen and (max-width: 1290px) {
+          font-size: 82px;
+          top: -48px;
+        }
+      }
+    }
+  }
+}

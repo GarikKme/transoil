@@ -1,0 +1,20 @@
+.main-screen {
+  background: url(../images/BG.png) center/cover no-repeat;
+  min-height: 80vh;
+  @include flex-middle;
+  text-align: center;
+  &__wrap {
+    padding-top: 200px;
+    color: $white;
+    a {
+      color: $white;
+    }
+    p {
+      font-size: 24px;
+      margin: 0 0 50px 0;
+      @media screen and (max-width: 768px){
+        font-size: 16px;
+      }
+    }
+  }
+}
