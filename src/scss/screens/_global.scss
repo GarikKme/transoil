@@ -2,20 +2,13 @@
   position: relative;
   padding-bottom: 50px;
 
-  .container {
-    @media screen and (max-width: 1280px) {
-      max-width: 100% !important;
-      padding: 0 !important;
-    }
-  }
-
   h2 {
     @media screen and (max-width: 1290px) {
-      text-align: center;
+      padding-left: 36px;
       span.span-num {
-        left: 50%;
-        bottom: -104px;
-        transform: translate(-102%, -1%);
+        font-size: 128px;
+        left: 0;
+        bottom: -26px;
       }
     }
   }
@@ -43,6 +36,14 @@
   &__wrap {
     display: flex;
     flex-direction: column;
+    .container {
+      display: flex;
+      flex-direction: column;
+      @media screen and (max-width: 1280px) {
+        max-width: 100% !important;
+        padding: 0 !important;
+      }
+    }
   }
 
   &__wrap-content {
@@ -51,7 +52,7 @@
     background: rgba(255, 255, 255, 0.80);
     backdrop-filter: blur(6px);
     padding: 120px 20px 50px 140px;
-    margin-top: 150px;
+    margin-top: 151px;
     max-height: 620px;
     @media screen and (max-width: 576px) {
       padding: 95px 20px 13px 30px;

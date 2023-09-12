@@ -55,11 +55,11 @@ function changeClass(el) {
 
 
 }
-
 tabs.forEach(item => {
 	item.addEventListener('click', (e) => {
-		const currentTab = e.target.dataset.btn;
-		changeClass(e.target);
+		console.log(item);
+		const currentTab = item.dataset.btn;
+		changeClass(item);
 		for (let i = 0; i < content.length; i++) {
 			content[i].classList.remove('active');
 			if (content[i].dataset.content === currentTab) {
@@ -68,3 +68,51 @@ tabs.forEach(item => {
 		}
 	})
 })
+
+//hover on items proposals
+
+const items = document.querySelectorAll('.proposals__wrap-item');
+
+items.forEach(function (item) {
+	item.addEventListener('mouseover', function () {
+		this.classList.add('active');
+	})
+})
+
+//accord creation function on proposals section
+const proposalTitle= document.querySelectorAll('.proposals__accordItem-title');
+
+function proposalAccordCreate(accord) {
+	accord.forEach(item => {
+		item.addEventListener('click', function () {
+			this.classList.toggle('active');
+			this.nextElementSibling.classList.toggle('active');
+		});
+	})
+}
+
+if (proposalTitle) {
+	proposalAccordCreate(proposalTitle);
+}
+
+
+
+
+// services mobile accordion
+
+//accord creation function on services
+
+function accordCreate(accord) {
+	accord.forEach(item => {
+		item.addEventListener('click', function () {
+			this.classList.toggle('active');
+			this.nextElementSibling.classList.toggle('active');
+		});
+	})
+}
+
+//faq accordion function
+const accordTitle= document.querySelectorAll('.accord__title');
+if (accordTitle) {
+	accordCreate(accordTitle);
+}

@@ -4,6 +4,12 @@
   margin-top: 105px;
   margin-bottom: 250px;
 
+  @media screen and (max-width: 992px){
+    margin-top: 0;
+    margin-bottom: 100px;
+    padding-top: 110px;
+  }
+
   &-blue-left {
     position: absolute;
     left: 0;
@@ -12,8 +18,9 @@
     width: 40%;
     height: 91%;
     z-index: -1;
-    @media screen and (max-width: 992px){
+    @media screen and (max-width: 992px) {
       width: 100%;
+      height: 100%;
     }
   }
 
@@ -24,13 +31,16 @@
     width: 60%;
     max-height: 950px;
     z-index: -1;
-    @media screen and (max-width: 992px){
+    @media screen and (max-width: 992px) {
       display: none;
     }
   }
 
   &__wrap {
-    h2 {
+    &-title {
+      @media screen and (max-width: 992px){
+        padding-left: 35px;
+      }
       .span-num {
         color: #0068B4;
       }
@@ -41,6 +51,19 @@
     display: flex;
     justify-content: space-between;
     gap: 24px;
+    margin-top: 50px;
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
+  }
+
+  &__wrap-content_mobile {
+    display: none;
+    @media screen and (max-width: 992px) {
+      display: block;
+      padding-bottom: 20px;
+      margin-top: 45px;
+    }
   }
 
   &__wrap-content-left {
@@ -58,8 +81,12 @@
     margin-bottom: 24px;
     min-height: 145px;
     max-width: 386px;
+    width: 386px  ;
     max-height: 155px;
     transition: all 1s ease;
+    @media screen and (max-width: 1290px) {
+      width: 336px;
+    }
 
     &.active {
       max-width: 480px;
@@ -72,6 +99,9 @@
       @media screen and (max-width: 1290px) {
         height: 210px;
         width: 366px;
+      }
+      @media screen and (max-width: 992px) {
+        margin-bottom: 0;
       }
     }
 
@@ -89,6 +119,9 @@
       font-size: 28px;
       font-weight: 700;
       pointer-events: none;
+      @media screen and (max-width: 992px){
+        font-size: 24px;
+      }
     }
 
     button {
@@ -110,6 +143,31 @@
 
     &:nth-child(3) {
       background: url("../images/serv3.png") top/cover no-repeat;
+    }
+
+    @media screen and (max-width: 992px) {
+      max-width: 100%;
+      margin-bottom: 0;
+      &:nth-child(1) {
+        background: none;
+      }
+
+      &:nth-child(2) {
+        background: none;
+      }
+
+      &:nth-child(3) {
+        background: none;
+      }
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        z-index: -1;
+      }
     }
   }
 
@@ -157,6 +215,114 @@
 
     .blue-span {
       color: $blue;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 32px;
+      @media screen and (max-width: 1290px) {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+//mobile
+
+.accord {
+  &__item {
+    position: relative;
+    margin-top: 20px;
+    @media screen and (max-width: 992px){
+      margin: 20px auto 20px;
+      max-width: 400px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    cursor: pointer;
+    max-width: 700px;
+
+    span.arrow {
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: rgba(255, 255, 255, 0.80);
+      width: 28%;
+      height: 100%;
+      @include flex-middle;
+      border-radius: 0 12px 12px 0;
+
+      img {
+        transition: all .5s ease;
+      }
+    }
+
+    p {
+      font-size: 32px;
+      @media screen and (max-width: 576px) {
+        font-size: 25px;
+      }
+    }
+
+    &.active {
+      span.arrow {
+        img {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+
+  &__desc {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height ease-in-out .3s, opacity ease-in-out .3s, padding-bottom ease-in-out .3s;
+    max-width: 800px;
+    line-height: 25px;
+
+    &.active {
+      padding-top: 26px;
+      max-height: 40em;
+      padding-bottom: 54px;
+      opacity: 1;
+    }
+
+    h3 {
+      color: $white;
+      font-family: $font-exo;
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 25px;
+    }
+
+    p {
+      color: $white;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 180%; /* 32.4px */
+      margin-bottom: 20px;
+      @media screen and (max-width: 1290px) {
+        font-size: 15px;
+      }
+    }
+
+    ul {
+      margin-bottom: 20px;
+
+      li {
+        color: $white;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 35px;
+        @media screen and (max-width: 1290px) {
+          font-size: 15px;
+        }
+      }
+    }
+
+    .blue-span {
+      color: $white;
       font-size: 16px;
       font-weight: 700;
       line-height: 32px;

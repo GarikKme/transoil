@@ -4,10 +4,10 @@
   @include flex-middle;
   text-align: center;
   &__wrap {
-    padding-top: 200px;
     color: $white;
     a {
       color: $white;
+      margin-bottom: 111px;
     }
     p {
       font-size: 24px;
@@ -15,6 +15,49 @@
       @media screen and (max-width: 768px){
         font-size: 16px;
       }
+    }
+  }
+  .scroll {
+    position: relative;
+    color: $white;
+    font-size: 16px;
+    span {
+      display: block;
+      transition: all .5s ease;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    span.cirle1 {
+      width: 86px;
+      height: 86px;
+      border-radius: 50%;
+      background: rgba(#fff, .18);
+      left: -19px;
+      top: 40px;
+      border: .2px solid $blue;
+    }
+    span.cirle2 {
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: rgba(#fff, .32);
+      left: -7px;
+      top: 52px;
+    }
+    span.cirle3 {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(#fff, .42);
+      left: 4px;
+      top: 63px;
+      border: 1px solid $blue;
+    }
+    svg {
+      position: absolute;
+      top: 82px;
+      left: 20px;
     }
   }
 }

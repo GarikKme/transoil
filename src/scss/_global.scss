@@ -289,19 +289,26 @@ h2 {
 	position: relative;
 	span.span-num {
 		position: absolute;
-		left: 0;
-		bottom: -70px;
+		left: -22px;
+		bottom: -22px;
+		line-height: 100%;
 		color: #F2F2F2;
 		font-family: $font-exo;
 		font-size: 190px;
 		font-weight: 800;
 		z-index: -1;
+		@media screen and (max-width: 992px){
+			font-size: 128px;
+			left: 0;
+			bottom: -27px;
+		}
 	}
 }
 
 //tabs
 .content {
 	display: none;
+	transition: all .3s ease;
 }
 .content.active {
 	display: block;
