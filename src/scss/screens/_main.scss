@@ -5,17 +5,30 @@
   text-align: center;
   &__wrap {
     color: $white;
-    a {
-      color: $white;
-      margin-bottom: 111px;
+    h1 {
+      max-width: 1076px;
+      width: 100%;
+      min-height: 78px;
     }
     p {
       font-size: 24px;
-      margin: 0 0 50px 0;
-      @media screen and (max-width: 768px){
+      margin: 0 auto 50px;
+      width: 100%;
+      max-width: 718px;
+      min-height: 43px;
+      @media screen and (max-width: 768px) {
         font-size: 16px;
       }
     }
+  }
+  &__btn {
+    display: block;
+    max-width: 208px;
+    width: 100%;
+    min-height: 40px;
+    margin: 0 auto;
+    color: $white;
+    margin-bottom: 111px;
   }
   .scroll {
     position: relative;
@@ -23,7 +36,7 @@
     font-size: 16px;
     span {
       display: block;
-      transition: all .5s ease;
+      transition: all 0.5s ease;
       position: absolute;
       left: 0;
       top: 0;
@@ -32,16 +45,16 @@
       width: 86px;
       height: 86px;
       border-radius: 50%;
-      background: rgba(#fff, .18);
+      background: rgba(#fff, 0.18);
       left: -19px;
       top: 40px;
-      border: .2px solid $blue;
+      border: 0.2px solid $blue;
     }
     span.cirle2 {
       width: 62px;
       height: 62px;
       border-radius: 50%;
-      background: rgba(#fff, .32);
+      background: rgba(#fff, 0.32);
       left: -7px;
       top: 52px;
     }
@@ -49,7 +62,7 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      background: rgba(#fff, .42);
+      background: rgba(#fff, 0.42);
       left: 4px;
       top: 63px;
       border: 1px solid $blue;

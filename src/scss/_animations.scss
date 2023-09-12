@@ -1,3 +1,31 @@
+.fade-up {
+  overflow: hidden;
+  position: relative;
+}
+
+.fade-up-child {
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: fadeUp 2s ease-in forwards;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0.2;
+    top: 110%;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+  }
+}
+
 @keyframes moveTextLeft {
   0% {
     left: 50%;
