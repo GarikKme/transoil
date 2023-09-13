@@ -125,6 +125,21 @@
       width: 336px;
     }
 
+    &:hover {
+      max-width: 480px;
+      width: 480px;
+      height: 310px;
+      max-height: 310px;
+
+      @media screen and (max-width: 1290px) {
+        height: 210px;
+        width: 366px;
+      }
+      @media screen and (max-width: 992px) {
+        margin-bottom: 0;
+      }
+    }
+
     &.active {
       max-width: 480px;
       width: 480px;
