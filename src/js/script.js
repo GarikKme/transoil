@@ -225,15 +225,17 @@ const initAnimations = () => {
 
     if (isVisible) {
       const slidesTop = locations.querySelector(".locations__wrap-content_bg");
+      const wrapMap = locations.querySelector(".locations__wrap-map");
       const scale = locations.querySelector(".locations__wrap-map-template");
-      const slidesInRight = locations.querySelector(".slideInRight");
+      const slidesInRight = locations.querySelectorAll(".slideInRight");
       const slideInLeftLocation = locations.querySelectorAll(
         ".slideInLeftLocation"
       );
 
       slidesTop.classList.add("visible");
       scale.classList.add("visible");
-      slidesInRight.classList.add("visible");
+      wrapMap.classList.add("visible");
+      slidesInRight.forEach((slide) => slide.classList.add("visible"));
       slideInLeftLocation.forEach((number) => number.classList.add("visible"));
     }
   };

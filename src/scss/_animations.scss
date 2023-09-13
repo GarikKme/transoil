@@ -58,6 +58,39 @@
   animation: zoomDown 2s ease-in-out forwards;
 }
 
+
+.slideInLeftServices1 {
+  transform: translateX(60vw);
+}
+
+.slideInLeftServices2 {
+  transform: translateX(calc(60vw + 80px));
+}
+
+.slideInLeftServices3 {
+  transform: translateX(calc(60vw + 160px));
+}
+
+.slideInLeftServices1.visible {
+  animation: slideInLeftServices1 2s ease-in-out forwards;
+}
+
+.slideInLeftServices2.visible {
+  animation: slideInLeftServices2 2s ease-in-out 0.3s forwards;
+}
+
+.slideInLeftServices3.visible {
+  animation: slideInLeftServices3 2s ease-in-out 0.6s forwards;
+}
+
+.slideInLeftLocation {
+  transform: translateX(100%);
+}
+
+.slideInLeftLocation.visible {
+  animation: slideInLeftLocation 2s ease-in-out 0.6s forwards;
+}
+
 @keyframes appear {
   0% {
     opacity: 0;
@@ -235,38 +268,6 @@
   }
 }
 
-.slideInLeftServices1 {
-  transform: translateX(60vw);
-}
-
-.slideInLeftServices2 {
-  transform: translateX(calc(60vw + 80px));
-}
-
-.slideInLeftServices3 {
-  transform: translateX(calc(60vw + 160px));
-}
-
-.slideInLeftServices1.visible {
-  animation: slideInLeftServices1 2s ease-in-out forwards;
-}
-
-.slideInLeftServices2.visible {
-  animation: slideInLeftServices2 2s ease-in-out 0.3s forwards;
-}
-
-.slideInLeftServices3.visible {
-  animation: slideInLeftServices3 2s ease-in-out 0.6s forwards;
-}
-
-.slideInLeftLocation {
-  transform: translateX(100%);
-}
-
-.slideInLeftLocation.visible {
-  animation: slideInLeftLocation 2s ease-in-out 0.6s forwards;
-}
-
 @keyframes slideInLeftServices1 {
   0% {
     opacity: 0;
@@ -330,5 +331,16 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  @keyframes locationMap {
+    0% {
+      transform: scale(1.4) translateX(-50%);
+    }
+    100% {
+      transform: scale(1) translateX(-50%);
+    }
   }
 }
