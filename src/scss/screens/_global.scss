@@ -11,6 +11,11 @@
         bottom: -26px;
       }
     }
+    @media screen and (max-width: 992px){
+          svg {
+            max-width: 300px;
+          }
+    }
   }
 
   &-image {
@@ -18,17 +23,26 @@
     left: 0;
     top: 100px;
     overflow: hidden;
+
+
+    @media screen and (max-width: 1600px) {
+      img {
+        max-width: 900px;
+        max-height: 574px;
+      }
+    }
     @media screen and (max-width: 1290px) {
       width: 100%;
-      top: 115px;
-      min-height: 608px;
-      max-height: 663px;
+      top: 70px;
+      img {
+        max-height: 562px;
+      }
     }
     @media screen and (max-width: 992px) {
       min-height: 530px;
       max-height: 548px;
       img {
-        height: 522px;
+        height: 474px;
       }
     }
     @media screen and (max-width: 576px) {
@@ -58,6 +72,14 @@
     padding: 120px 20px 50px 140px;
     margin-top: 151px;
     max-height: 620px;
+    @media screen and (max-width: 1600px) {
+      padding: 60px 20px 50px 120px;
+      margin-top: 110px;
+    }
+
+    @media screen and (max-width: 1290px) {
+      margin-top: 65px;
+    }
 
     &::before {
       content: "";
@@ -79,6 +101,7 @@
 
     @media screen and (max-width: 576px) {
       padding: 95px 20px 13px 30px;
+      margin-top: 102px;
     }
 
     p {
@@ -89,6 +112,10 @@
       margin-bottom: 115px;
       max-width: 369px;
       padding-left: 107px;
+      @media screen and (max-width: 1600px) {
+        padding-left: 83px;
+        margin-bottom: 90px;
+      }
       @media screen and (max-width: 1290px) {
         margin-bottom: 67px;
       }
@@ -122,6 +149,10 @@
         top: -71px;
         line-height: 1em;
         z-index: 0;
+        @media screen and (max-width: 1600px) {
+          font-size: 100px;
+          top: -48px;
+        }
         @media screen and (max-width: 1290px) {
           font-size: 82px;
           top: -48px;

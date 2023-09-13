@@ -288,8 +288,10 @@ h2 {
   position: relative;
   span.span-num {
     position: absolute;
-    left: -22px;
-    bottom: -22px;
+    left: -22px !important;
+    bottom: -22px !important;
+    top: unset !important;
+    height: inherit;
     line-height: 100%;
     color: #f2f2f2;
     font-family: $font-exo;
@@ -298,8 +300,8 @@ h2 {
     z-index: -1;
     @media screen and (max-width: 992px) {
       font-size: 128px;
-      left: 0;
-      bottom: -27px;
+      left: 0 !important;
+      bottom: -27px !important;
     }
   }
 }
@@ -315,7 +317,6 @@ h2 {
 
 //fon
 .blue-fon {
-  // background: url("../images/bluefon.png");
   background-image: image-set(
     url("../images/bluefon.webp"),
     url("../images/bluefon.png")
