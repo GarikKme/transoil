@@ -49,6 +49,9 @@
   min-height: 93vh;
   @include flex-middle;
   text-align: center;
+  @media screen and (max-width: 576px){
+    min-height: 100vh;
+  }
   &__wrap {
     color: $white;
     h1 {
@@ -75,6 +78,9 @@
     margin: 0 auto;
     color: $white;
     margin-bottom: 111px;
+    @media screen and (max-width: 576px){
+      margin-bottom: 70px;
+    }
   }
   .scroll {
     position: relative;
