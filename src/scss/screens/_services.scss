@@ -101,6 +101,7 @@
 
   &__wrap-content-left {
     width: 100%;
+    align-self: flex-end;
   }
 
   &__wrap-content-right {
@@ -185,10 +186,7 @@
     }
 
     &:nth-child(1) {
-      background: image-set(
-                      url("../images/serv1.webp"),
-                      url("../images/serv1.png")
-      ) top/cover no-repeat;
+      background: image-set(url("../images/serv1.webp"),url("../images/serv1.png")) top/cover no-repeat;
     }
 
     &:nth-child(2) {
