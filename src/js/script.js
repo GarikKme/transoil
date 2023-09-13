@@ -31,9 +31,11 @@ function initScript() {
     navOverlay.classList.toggle("open");
     menu.classList.toggle("open");
     document.querySelector("body").classList.toggle("openMenu");
-    document.querySelectorAll("li.header__menu-item").forEach((item) => item.classList.toggle("show"));
-    const wrapFadeUp = document.querySelector('.fade-up.header__wrapper');
-    wrapFadeUp.classList.toggle('show');
+    document
+      .querySelectorAll("li.header__menu-item")
+      .forEach((item) => item.classList.toggle("show"));
+    const wrapFadeUp = document.querySelector(".fade-up.header__wrapper");
+    wrapFadeUp.classList.toggle("show");
   });
 
   //fade-up header__wrapper
@@ -166,6 +168,7 @@ const initAnimations = () => {
 
       if (isInView(element) && !animations.fadeUp[index].isElementsFired) {
         element.querySelector(".fade-up-child").classList.add("visible");
+        element.classList.add("shown");
         animations.fadeUp[index].isElementsFired = true;
       }
     });
@@ -230,7 +233,8 @@ const initAnimations = () => {
       const wrapMap = locations.querySelector(".locations__wrap-map");
       const scale = locations.querySelector(".locations__wrap-map-template");
       const slidesInRight = locations.querySelectorAll(".slideInRight");
-      const slideInRightTitle = locations.querySelectorAll(".slideInRightTitle");
+      const slideInRightTitle =
+        locations.querySelectorAll(".slideInRightTitle");
       const slideInLeftLocation = locations.querySelectorAll(
         ".slideInLeftLocation"
       );

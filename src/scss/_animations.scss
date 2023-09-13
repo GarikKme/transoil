@@ -1,6 +1,11 @@
 .fade-up {
   overflow: hidden;
   position: relative;
+  display: none;
+}
+
+.fade-up.shown {
+  display: block;
 }
 
 .fade-up-child {
@@ -57,7 +62,6 @@
 .zoomDown.visible {
   animation: zoomDown 2s ease-in-out forwards;
 }
-
 
 .slideInLeftServices1 {
   transform: translateX(60vw);
