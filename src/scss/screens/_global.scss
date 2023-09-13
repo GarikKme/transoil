@@ -27,6 +27,9 @@
     @media screen and (max-width: 992px) {
       min-height: 530px;
       max-height: 548px;
+      img {
+        height: 522px;
+      }
     }
     @media screen and (max-width: 576px) {
       top: 105px;
