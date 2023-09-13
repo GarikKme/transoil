@@ -5,24 +5,19 @@
 
   @media screen and (max-width: 992px) {
     padding-top: 33px;
-
-    &__number {
-      left: 5px !important;
-      top: -60px !important;
-    }
   }
 
-  &__number {
-    left: -20px !important;
-    top: -118px !important;
-  }
-
-  @media screen and (max-width: 992px) {
-    &__number {
-      left: 5px !important;
-      top: -60px !important;
-    }
-  }
+  //&__number {
+  //  left: -20px !important;
+  //  top: -118px !important;
+  //}
+  //
+  //@media screen and (max-width: 992px) {
+  //  &__number {
+  //    left: 5px !important;
+  //    top: -60px !important;
+  //  }
+  //}
 
   &__wrap-content {
     padding-top: 100px;
