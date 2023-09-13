@@ -211,11 +211,17 @@
     &__wrap-map-item {
       display: none;
     }
-
     &__wrap-content {
-      h3.visible,
-      h4.visible {
-        animation: slideInRight 2s ease-in-out forwards;
+      @media screen and (max-width: 1000px) {
+        h3,
+        h4 {
+          transform: translateX(-30vw);
+        }
+
+        h3.visible,
+        h4.visible {
+          animation: slideInRight 2s ease-in-out forwards;
+        }
       }
     }
 

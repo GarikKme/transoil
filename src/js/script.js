@@ -230,6 +230,7 @@ const initAnimations = () => {
       const wrapMap = locations.querySelector(".locations__wrap-map");
       const scale = locations.querySelector(".locations__wrap-map-template");
       const slidesInRight = locations.querySelectorAll(".slideInRight");
+      const slideInRightTitle = locations.querySelectorAll(".slideInRightTitle");
       const slideInLeftLocation = locations.querySelectorAll(
         ".slideInLeftLocation"
       );
@@ -238,6 +239,7 @@ const initAnimations = () => {
       scale.classList.add("visible");
       wrapMap.classList.add("visible");
       slidesInRight.forEach((slide) => slide.classList.add("visible"));
+      slideInRightTitle.forEach((slide) => slide.classList.add("visible"));
       slideInLeftLocation.forEach((number) => number.classList.add("visible"));
     }
   };
