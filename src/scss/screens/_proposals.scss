@@ -72,9 +72,10 @@
       padding-left: 0;
     }
 
-    &.active {
+    &:hover {
       .proposals__accordItem {
         opacity: 1;
+        max-height: 40em;
       }
     }
   }
@@ -87,15 +88,24 @@
     opacity: 0;
     font-family: $font-exo;
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 400;
     color: #fff;
     background: rgba(0, 0, 0, 0.80);
     width: 100%;
     min-height: 120px;
     display: flex;
-    align-items: center;
     flex-direction: column;
     padding-top: 30px;
+    padding-left: 18px;
+    padding-bottom: 25px;
+
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height ease .7s, opacity ease .7s, padding ease .7s;
+    max-width: 800px;
+
+
     @media screen and (max-width: 1390px) {
       bottom: 15%;
     }
@@ -114,36 +124,26 @@
 
     &-title {
       cursor: pointer;
-
-      p {
-        line-height: 1.1;
-      }
-    }
-
-    &-desc {
       font-family: $font;
-      font-size: 20px;
-      max-height: 0;
-      overflow: hidden;
-      opacity: 0;
-      transition: max-height ease .7s, opacity ease .7s, padding ease .7s;
-      max-width: 800px;
+
+
       line-height: 25px;
       color: #fff;
-
-      &.active {
-        padding: 26px 10px;
-        max-height: 40em;
-        opacity: 1;
-        @media screen and (max-width: 992px) {
-          padding: 26px 10px 26px 0;
-        }
-      }
 
       @media screen and (max-width: 992px) {
         font-size: 18px;
       }
+
+      p {
+        line-height: 1.1;
+
+        &.desc {
+          font-size: 20px;
+          margin-top: 30px;
+        }
+      }
     }
+
 
     &:first-child .proposals__accordItem-desc {
       max-width: 268px;

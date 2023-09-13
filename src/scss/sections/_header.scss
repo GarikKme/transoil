@@ -159,6 +159,9 @@
 			background: transparent;
 			cursor: pointer;
 			color: $white;
+			&:focus-visible {
+				outline: none;
+			}
 		}
 		@media screen and (max-width: 992px){
 			display: none;

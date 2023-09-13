@@ -67,6 +67,9 @@
         a {
           color: $white;
           font-size: 18px;
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
