@@ -5,7 +5,11 @@
   &::before {
     content: "";
     position: absolute;
-    background-image: url(../images/main-top.png);
+    // background-image: url(../images/main-top.png);
+    background-image: image-set(
+      url(../images/main-top.webp),
+      url(../images/main-top.png)
+    );
     background-repeat: no-repeat;
     background-size: cover;
     animation: backgroundZoomUp 3s ease-in forwards;
@@ -17,7 +21,11 @@
     content: "";
     position: absolute;
     bottom: 0;
-    background-image: url(../images/main-bottom.png);
+    // background-image: url(../images/main-bottom.png);
+    background-image: image-set(
+      url(../images/main-bottom.webp),
+      url(../images/main-bottom.png)
+    );
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: contain;
@@ -127,7 +135,11 @@
     &::before {
       content: "";
       position: absolute;
-      background-image: url(../images/bg-mobile.png);
+      // background-image: url(../images/bg-mobile.png);
+      background-image: image-set(
+        url(../images/bg-mobile.webp),
+        url(../images/bg-mobile.png)
+      );
       background-repeat: no-repeat;
       background-size: cover;
       animation: zoomDown 3s ease-in forwards;
