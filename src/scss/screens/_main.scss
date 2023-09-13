@@ -28,7 +28,7 @@
     animation: backgroundZoomDown 3s ease-in forwards;
     height: 100%;
     width: 100%;
-    @media screen and (max-width: 992px){
+    @media screen and (max-width: 992px) {
       background-size: cover;
     }
   }
@@ -120,6 +120,24 @@
       position: absolute;
       top: 80px;
       left: 17px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(../images/bg-mobile.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      animation: zoomDown 3s ease-in forwards;
+      height: 100%;
+      width: 100%;
+    }
+
+    &::after {
+      content: "";
+      display: none;
     }
   }
 }
