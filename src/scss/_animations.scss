@@ -10,7 +10,104 @@
   top: 110%;
   left: 50%;
   transform: translateX(-50%);
+}
+.fade-up-child.visible {
   animation: fadeUp 2s ease-in forwards;
+}
+
+.zoom-appear {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-100%, -100%);
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.zoom-appear.visible {
+  transform: translate(0, 0);
+  opacity: 1;
+  animation: appear 2s ease-in-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.slideInRight {
+  transform: translateX(-30vw);
+}
+
+.slideInRight.visible {
+  animation: slideInRight 2s ease-in-out forwards;
+}
+
+.slideInLeft {
+  transform: translateX(30vw);
+}
+
+.slideInLeft.visible {
+  animation: slideInLeft 2s ease-in-out forwards;
+}
+
+.zoomDown {
+  transform: scale(1.25);
+}
+
+.zoomDown.visible {
+  animation: zoomDown 2s ease-in-out forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-30vw);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@media screen and (max-width: 992px) {
+  @keyframes slideInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(-100vw);
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(30vw);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @keyframes fadeUp {
@@ -23,6 +120,94 @@
   }
   100% {
     top: 0;
+  }
+}
+
+@keyframes zoomDown {
+  0% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes backgroundZoomUp {
+  0% {
+    background-position: 10% 0;
+    transform: scale(1) translate(0, -100px);
+  }
+  100% {
+    background-position: 23% 33%;
+    transform: scale(1.2) translateX(-50px);
+  }
+}
+
+@keyframes backgroundZoomDown {
+  0% {
+    background-position: 14% 100%;
+    transform: scale(1.3);
+  }
+  100% {
+    background-position: 23% 100%;
+    transform: scale(1);
+  }
+}
+
+@keyframes scrollAnim1 {
+  10% {
+    width: 86px;
+    height: 86px;
+  }
+  40% {
+    width: 70px;
+    height: 70px;
+  }
+  60% {
+    width: 70px;
+    height: 70px;
+  }
+  90% {
+    width: 86px;
+    height: 86px;
+  }
+}
+
+@keyframes scrollAnim2 {
+  10% {
+    width: 62px;
+    height: 62px;
+  }
+  40% {
+    width: 104px;
+    height: 104px;
+  }
+  60% {
+    width: 104px;
+    height: 104px;
+  }
+  90% {
+    width: 62px;
+    height: 62px;
+  }
+}
+
+@keyframes scrollAnim3 {
+  10% {
+    width: 40px;
+    height: 40px;
+  }
+  40% {
+    width: 26px;
+    height: 26px;
+  }
+  60% {
+    width: 26px;
+    height: 26px;
+  }
+  90% {
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -47,5 +232,103 @@
   }
   100% {
     right: -50%;
+  }
+}
+
+.slideInLeftServices1 {
+  transform: translateX(60vw);
+}
+
+.slideInLeftServices2 {
+  transform: translateX(calc(60vw + 80px));
+}
+
+.slideInLeftServices3 {
+  transform: translateX(calc(60vw + 160px));
+}
+
+.slideInLeftServices1.visible {
+  animation: slideInLeftServices1 2s ease-in-out forwards;
+}
+
+.slideInLeftServices2.visible {
+  animation: slideInLeftServices2 2s ease-in-out 0.3s forwards;
+}
+
+.slideInLeftServices3.visible {
+  animation: slideInLeftServices3 2s ease-in-out 0.6s forwards;
+}
+
+.slideInLeftLocation {
+  transform: translateX(100%);
+}
+
+.slideInLeftLocation.visible {
+  animation: slideInLeftLocation 2s ease-in-out 0.6s forwards;
+}
+
+@keyframes slideInLeftServices1 {
+  0% {
+    opacity: 0;
+    transform: translateX(60vw);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeftServices2 {
+  0% {
+    opacity: 0;
+    transform: translateX(calc(60vw + 80px));
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeftServices3 {
+  0% {
+    opacity: 0;
+    transform: translateX(calc(60vw + 160px));
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes slideInLeftLocation {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes locationMap {
+  0% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
   }
 }

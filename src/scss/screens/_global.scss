@@ -17,13 +17,14 @@
     position: absolute;
     left: 0;
     top: 100px;
+    overflow: hidden;
     @media screen and (max-width: 1290px) {
       width: 100%;
       top: 115px;
       min-height: 608px;
       max-height: 663px;
     }
-    @media screen and (max-width: 992px){
+    @media screen and (max-width: 992px) {
       min-height: 530px;
       max-height: 548px;
     }
@@ -47,13 +48,32 @@
   }
 
   &__wrap-content {
+    position: relative;
     align-self: flex-end;
     border-radius: 60px 0px 0px 0px;
-    background: rgba(255, 255, 255, 0.80);
-    backdrop-filter: blur(6px);
+
     padding: 120px 20px 50px 140px;
     margin-top: 151px;
     max-height: 620px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0%;
+      z-index: 0;
+      border-radius: 60px 0 0 0;
+
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(6px);
+    }
+
+    &.visible::before {
+      animation: slideTop 2s ease-in-out forwards;
+    }
+
     @media screen and (max-width: 576px) {
       padding: 95px 20px 13px 30px;
     }
@@ -75,18 +95,22 @@
         font-size: 18px;
       }
 
-      @media screen and (max-width: 992px){
-            max-width: 270px;
+      @media screen and (max-width: 992px) {
+        max-width: 270px;
       }
 
       span {
-        color: $blue;
-        font-size: 24px;
-        font-weight: 700;
+        display: inline-block;
+
+        span {
+          color: $blue;
+          font-size: 24px;
+          font-weight: 700;
+        }
       }
 
       span.big-num {
-        color: #F6F6F6;
+        color: #f6f6f6;
         font-family: $font-exo;
         font-size: 128px;
         font-weight: 900;
@@ -94,7 +118,7 @@
         left: 0;
         top: -71px;
         line-height: 1em;
-        z-index: -1;
+        z-index: 0;
         @media screen and (max-width: 1290px) {
           font-size: 82px;
           top: -48px;

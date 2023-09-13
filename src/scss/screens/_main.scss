@@ -1,6 +1,40 @@
 .main-screen {
-  background: url(../images/BG.png) center/cover no-repeat;
-  min-height: 80vh;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url(../images/main-top.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: backgroundZoomUp 3s ease-in forwards;
+    height: 100%;
+    width: 100%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-image: url(../images/main-bottom.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+
+    // background-position: 14% 100%;
+    // transform: scale(1.3);
+
+    animation: backgroundZoomDown 3s ease-in forwards;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__relative {
+    position: relative;
+    z-index: 1;
+  }
+
+  min-height: 100vh;
   @include flex-middle;
   text-align: center;
   &__wrap {
@@ -34,43 +68,50 @@
     position: relative;
     color: $white;
     font-size: 16px;
-    span {
+    .circles {
       display: block;
-      transition: all 0.5s ease;
-      position: absolute;
-      left: 0;
-      top: 0;
+      position: relative;
+      width: 100%;
+      max-width: 104px;
+      min-height: 104px;
+      margin: 0 auto;
+
+      span {
+        display: block;
+        transition: all 0.5s ease;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      span.cirle1 {
+        width: 86px;
+        height: 86px;
+        border-radius: 50%;
+        background: rgba(#fff, 0.18);
+        animation: scrollAnim1 6s ease forwards infinite;
+      }
+      span.cirle2 {
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        background: rgba(#fff, 0.32);
+        animation: scrollAnim2 6s ease forwards infinite;
+      }
+      span.cirle3 {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(#fff, 0.42);
+        border: 1px solid $blue;
+        animation: scrollAnim3 6s ease forwards infinite;
+      }
     }
-    span.cirle1 {
-      width: 86px;
-      height: 86px;
-      border-radius: 50%;
-      background: rgba(#fff, 0.18);
-      left: -19px;
-      top: 40px;
-      border: 0.2px solid $blue;
-    }
-    span.cirle2 {
-      width: 62px;
-      height: 62px;
-      border-radius: 50%;
-      background: rgba(#fff, 0.32);
-      left: -7px;
-      top: 52px;
-    }
-    span.cirle3 {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: rgba(#fff, 0.42);
-      left: 4px;
-      top: 63px;
-      border: 1px solid $blue;
-    }
+
     svg {
       position: absolute;
-      top: 82px;
-      left: 20px;
+      top: 80px;
+      left: 17px;
     }
   }
 }

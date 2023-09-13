@@ -5,6 +5,23 @@
 
   @media screen and (max-width: 992px) {
     padding-top: 33px;
+
+    &__number {
+      left: 5px !important;
+      top: -60px !important;
+    }
+  }
+
+  &__number {
+    left: -20px !important;
+    top: -118px !important;
+  }
+
+  @media screen and (max-width: 992px) {
+    &__number {
+      left: 5px !important;
+      top: -60px !important;
+    }
   }
 
   &__wrap-content {
@@ -12,7 +29,7 @@
 
     h2 {
       margin-bottom: 65px;
-      @media screen and (max-width: 992px){
+      @media screen and (max-width: 992px) {
         padding-left: 15px;
       }
     }
@@ -47,6 +64,9 @@
     position: absolute;
     right: 0;
     top: 50px;
+    border-radius: 60px 0 0 0;
+    overflow: hidden;
+
     @media screen and (max-width: 1590px) {
       max-width: 40%;
     }
