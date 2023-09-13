@@ -13,6 +13,9 @@
 
 	&__wrapper {
 		min-height: 39px;
+		&.fade-up.show {
+			overflow: inherit;
+		}
 	}
 
 	&__nav {
@@ -133,7 +136,7 @@
 			align-items: center;
 			margin-left: 0;
 			width: 100%;
-			height: 100%;
+			height: 100vh;
 			position: fixed;
 			left: 0;
 			top: 0;

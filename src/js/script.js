@@ -31,10 +31,12 @@ function initScript() {
     navOverlay.classList.toggle("open");
     menu.classList.toggle("open");
     document.querySelector("body").classList.toggle("openMenu");
-    document
-      .querySelectorAll("li.header__menu-item")
-      .forEach((item) => item.classList.toggle("show"));
+    document.querySelectorAll("li.header__menu-item").forEach((item) => item.classList.toggle("show"));
+    const wrapFadeUp = document.querySelector('.fade-up.header__wrapper');
+    wrapFadeUp.classList.toggle('show');
   });
+
+  //fade-up header__wrapper
 
   //window.resize(resizeNav());
 
