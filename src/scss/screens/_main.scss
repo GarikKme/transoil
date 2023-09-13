@@ -41,6 +41,9 @@
   min-height: 93vh;
   @include flex-middle;
   text-align: center;
+  @media screen and (max-width: 576px){
+    min-height: 100vh;
+  }
   &__wrap {
     color: $white;
     h1 {
