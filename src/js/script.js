@@ -54,10 +54,10 @@ function changeClass(el) {
   // for (let i = 0; i < tabs.length; i++) {
   // 	tabs[i].classList.remove('active');
   // // }
-  el.classList.add("active");
+  el.classList.toggle("active");
 }
 tabs.forEach((item) => {
-  item.addEventListener("mouseover", (e) => {
+  item.addEventListener("click", (e) => {
     const currentTab = item.dataset.btn;
     changeClass(item);
     for (let i = 0; i < content.length; i++) {
