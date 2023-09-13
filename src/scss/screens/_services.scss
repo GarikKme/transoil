@@ -1,7 +1,7 @@
 .services {
   position: relative;
-  padding-top: 194px;
-  margin-top: 105px;
+  padding-top: 150px;
+  margin-top: 80px;
   margin-bottom: 250px;
 
   @media screen and (max-width: 992px) {
@@ -42,6 +42,7 @@
       display: none;
     }
   }
+
   @media screen and (max-width: 992px) {
     .services-blue-left.slideInRight {
       animation: none;
@@ -61,6 +62,7 @@
       @media screen and (max-width: 992px) {
         padding-left: 35px;
       }
+
       .span-num {
         color: #0068b4;
       }
@@ -72,8 +74,19 @@
     justify-content: space-between;
     gap: 24px;
     margin-top: 50px;
+    position: relative;
+    height: 684px;
     @media screen and (max-width: 992px) {
       display: none;
+    }
+  }
+
+  #contents {
+    max-width: 666px;
+    position: absolute;
+    right: 0;
+    @media screen and (max-width: 1280px) {
+      max-width: 520px;
     }
   }
 
@@ -88,6 +101,7 @@
 
   &__wrap-content-left {
     width: 100%;
+    align-self: flex-end;
   }
 
   &__wrap-content-right {
@@ -110,6 +124,21 @@
     transition: all 1s ease;
     @media screen and (max-width: 1290px) {
       width: 336px;
+    }
+
+    &:hover {
+      max-width: 480px;
+      width: 480px;
+      height: 310px;
+      max-height: 310px;
+
+      @media screen and (max-width: 1290px) {
+        height: 210px;
+        width: 366px;
+      }
+      @media screen and (max-width: 992px) {
+        margin-bottom: 0;
+      }
     }
 
     &.active {
@@ -157,29 +186,23 @@
     }
 
     &:nth-child(1) {
-      background: image-set(
-          url("../images/serv1.webp"),
-          url("../images/serv1.png")
-        )
-        top/cover no-repeat;
+      background: image-set(url("../images/serv1.webp"),url("../images/serv1.png")) top/cover no-repeat;
     }
 
     &:nth-child(2) {
       // background: url("../images/serv2.png") top/cover no-repeat;
       background: image-set(
-          url("../images/serv2.webp"),
-          url("../images/serv2.png")
-        )
-        top/cover no-repeat;
+                      url("../images/serv2.webp"),
+                      url("../images/serv2.png")
+      ) top/cover no-repeat;
     }
 
     &:nth-child(3) {
       // background: url("../images/serv3.png") top/cover no-repeat;
       background: image-set(
-          url("../images/serv3.webp"),
-          url("../images/serv3.png")
-        )
-        top/cover no-repeat;
+                      url("../images/serv3.webp"),
+                      url("../images/serv3.png")
+      ) top/cover no-repeat;
     }
 
     @media screen and (max-width: 992px) {
@@ -315,7 +338,7 @@
     overflow: hidden;
     opacity: 0;
     transition: max-height ease-in-out 0.3s, opacity ease-in-out 0.3s,
-      padding-bottom ease-in-out 0.3s;
+    padding-bottom ease-in-out 0.3s;
     max-width: 800px;
     line-height: 25px;
 

@@ -53,13 +53,10 @@ const tabs = document.querySelectorAll(".tab-btn");
 const content = document.querySelectorAll(".content");
 
 function changeClass(el) {
-  // for (let i = 0; i < tabs.length; i++) {
-  // 	tabs[i].classList.remove('active');
-  // // }
-  el.classList.add("active");
+  el.classList.toggle("active");
 }
 tabs.forEach((item) => {
-  item.addEventListener("mouseover", (e) => {
+  item.addEventListener("click", (e) => {
     const currentTab = item.dataset.btn;
     changeClass(item);
     for (let i = 0; i < content.length; i++) {
@@ -71,32 +68,6 @@ tabs.forEach((item) => {
   });
 });
 
-//hover on items proposals
-
-// const items = document.querySelectorAll(".proposals__wrap-item");
-//
-// items.forEach(function (item) {
-//   item.addEventListener("mouseover", function () {
-//     this.classList.add("active");
-//     this.children('.proposals__accordItem').classList.add("active");
-//   });
-// });
-
-//accord creation function on proposals section
-// const proposalTitle = document.querySelectorAll(".proposals__wrap-item");
-//
-// function proposalAccordCreate(accord) {
-//   accord.forEach((item) => {
-//     item.addEventListener("mouseover", function () {
-//       this.classList.toggle("active");
-//       this.nextElementSibling.classList.toggle("active");
-//     });
-//   });
-// }
-//
-// if (proposalTitle) {
-//   proposalAccordCreate(proposalTitle);
-// }
 
 // services mobile accordion
 
