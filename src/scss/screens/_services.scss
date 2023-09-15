@@ -4,6 +4,14 @@
   margin-top: 80px;
   margin-bottom: 250px;
 
+  @media screen and (max-width: 1600px){
+    padding-top: 80px;
+    h2 span.span-num {
+      font-size: 160px;
+      bottom: -30px !important;
+    }
+  }
+
   @media screen and (max-width: 992px) {
     margin-top: 0;
     margin-bottom: 100px;
@@ -32,6 +40,11 @@
     max-height: 950px;
     z-index: -1;
     overflow: hidden;
+
+    @media screen and (max-width: 1600px){
+      max-height: 760px;
+      top: 40px;
+    }
 
     img {
       width: 100%;
@@ -76,6 +89,9 @@
     margin-top: 50px;
     position: relative;
     height: 684px;
+    @media screen and (max-width: 1600px) {
+      margin-top: 0;
+    }
     @media screen and (max-width: 992px) {
       display: none;
     }
@@ -123,7 +139,7 @@
     justify-content: space-between;
     transition: all 1s ease;
     @media screen and (max-width: 1290px) {
-      width: 336px;
+      width: 310px;
     }
 
     &:hover {
@@ -132,12 +148,23 @@
       height: 310px;
       max-height: 310px;
 
+      @media screen and (max-width: 1600px) {
+        height: 260px;
+        max-width: 460px;
+        width: 460px;
+      }
+
       @media screen and (max-width: 1290px) {
         height: 210px;
         width: 366px;
       }
       @media screen and (max-width: 992px) {
         margin-bottom: 0;
+        &:hover {
+          width: 386px;
+          max-height: 155px;
+          height: 155px;
+        }
       }
     }
 
@@ -146,6 +173,12 @@
       width: 480px;
       height: 310px;
       max-height: 310px;
+
+      @media screen and (max-width: 1600px) {
+        height: 260px;
+        max-width: 460px;
+        width: 460px;
+      }
 
       @media screen and (max-width: 1290px) {
         height: 210px;
@@ -254,6 +287,9 @@
       font-weight: 400;
       line-height: 180%; /* 32.4px */
       margin-bottom: 20px;
+      @media screen and (max-width: 1600px) {
+        font-size: 16px;
+      }
       @media screen and (max-width: 1290px) {
         font-size: 15px;
       }
