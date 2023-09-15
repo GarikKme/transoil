@@ -68,7 +68,6 @@ tabs.forEach((item) => {
   });
 });
 
-
 // services mobile accordion
 
 //accord creation function on services
@@ -88,18 +87,36 @@ if (accordTitle) {
   accordCreate(accordTitle);
 }
 
-const isInView = (elem, bottom = 30) => {
-  // Get the top and bottom of the viewport.
-  const docViewTop = window.pageYOffset;
-  const docViewBottom = docViewTop + window.innerHeight;
+// const isInView = (elem, bottom = 30) => {
+//   // Get the top and bottom of the viewport.
+//   const docViewTop = window.pageYOffset;
+//   const docViewBottom = docViewTop + window.innerHeight;
 
-  // Get the top and bottom of the element.
-  const elemTop = elem.offsetTop;
-  const elemBottom = elemTop + bottom;
+//   // console.log(elem.offsetHeight);
 
-  // Return true if the element is within the viewport.
-  return elemBottom <= docViewBottom && elemTop >= docViewTop;
-};
+//   // Get the top and bottom of the element.
+//   const elemTop = elem.offsetTop;
+//   const elemBottom = elemTop + elem.offsetHeight;
+
+//   console.log(elemBottom, docViewBottom, elemTop, docViewTop);
+
+//   // Return true if the element is within the viewport.
+//   return elemBottom <= docViewBottom && elemTop >= docViewTop;
+// };
+
+function isInView(el) {
+  const rect = el.getBoundingClientRect();
+  const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+  const windowWidth = window.innerWidth || document.documentElement.clientWidth;
+
+  // Перевіряємо, чи елемент видимий хоча б частково по вертикалі та горизонталі
+  const isPartiallyVisible = (
+    (rect.top <= windowHeight && rect.bottom >= 0) &&
+    (rect.left <= windowWidth && rect.right >= 0)
+  );
+
+  return isPartiallyVisible;
+}
 
 const animations = {
   fadeUp: [
