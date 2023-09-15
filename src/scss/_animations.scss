@@ -17,7 +17,7 @@
   transform: translateX(-50%);
 }
 .fade-up-child.visible {
-  animation: fadeUp 2s ease-in forwards;
+  animation: fadeUp 1s ease-in forwards;
 }
 
 .zoom-appear {
@@ -33,7 +33,7 @@
 .zoom-appear.visible {
   transform: translate(0, 0);
   opacity: 1;
-  animation: appear 2s ease-in-out;
+  animation: appear 1s ease-in-out;
   position: absolute;
   left: 0;
   top: 0;
@@ -44,7 +44,7 @@
 }
 
 .slideInRight.visible {
-  animation: slideInRight 2s ease-in-out forwards;
+  animation: slideInRight 1s ease-in-out forwards;
 }
 
 .slideInLeft {
@@ -52,7 +52,7 @@
 }
 
 .slideInLeft.visible {
-  animation: slideInLeft 2s ease-in-out forwards;
+  animation: slideInLeft 1s ease-in-out forwards;
 }
 
 .zoomDown {
@@ -60,7 +60,7 @@
 }
 
 .zoomDown.visible {
-  animation: zoomDown 2s ease-in-out forwards;
+  animation: zoomDown 1s ease-in-out forwards;
 }
 
 .slideInLeftServices1 {
@@ -76,15 +76,15 @@
 }
 
 .slideInLeftServices1.visible {
-  animation: slideInLeftServices1 2s ease-in-out forwards;
+  animation: slideInLeftServices1 1s ease-in-out forwards;
 }
 
 .slideInLeftServices2.visible {
-  animation: slideInLeftServices2 2s ease-in-out 0.3s forwards;
+  animation: slideInLeftServices2 1s ease-in-out 0.3s forwards;
 }
 
 .slideInLeftServices3.visible {
-  animation: slideInLeftServices3 2s ease-in-out 0.6s forwards;
+  animation: slideInLeftServices3 1s ease-in-out 0.6s forwards;
 }
 
 .slideInLeftLocation {
@@ -92,7 +92,7 @@
 }
 
 .slideInLeftLocation.visible {
-  animation: slideInLeftLocation 2s ease-in-out 0.6s forwards;
+  animation: slideInLeftLocation 1s ease-in-out 0.6s forwards;
 }
 
 @keyframes appear {

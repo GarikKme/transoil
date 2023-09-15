@@ -228,6 +228,7 @@ const initAnimations = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   initAnimations();
+  
 });
 
 document.addEventListener("scroll", () => {
