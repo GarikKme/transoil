@@ -339,3 +339,13 @@ h2 {
 	display: block;
 	opacity: 1;
 }
+
+.lazyload {
+  display: none;
+  opacity: 0;
+}
+
+.lazyloaded {
+  display: block;
+  opacity: 1;
+}
