@@ -245,7 +245,7 @@ const initAnimations = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   initAnimations();
-  
+  lazySizes.init();
 });
 
 document.addEventListener("scroll", () => {
