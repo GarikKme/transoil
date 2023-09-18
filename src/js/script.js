@@ -258,11 +258,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const boxModal = document.querySelector('.box');
 const btnsOpenModal = document.querySelectorAll('.popup');
+const body = document.querySelector('body');
 
 btnsOpenModal.forEach(item => {
 	item.addEventListener('click', e => {
 		e.preventDefault();
 		boxModal.classList.toggle('active');
+		body.classList.toggle('open');
 	});
 });
 
@@ -270,4 +272,5 @@ btnsOpenModal.forEach(item => {
 
 boxModal.addEventListener('click', function () {
 	this.classList.toggle('active');
+	body.classList.toggle('open');
 });
