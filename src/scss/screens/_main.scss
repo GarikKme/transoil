@@ -1,161 +1,170 @@
 .main-screen {
-	position: relative;
-	background: #118fc9;
-	overflow: hidden;
-	min-height: 100vh;
-	&::before {
-		content: '';
-		position: absolute;
-		// background-image: url(../images/main-top.png);
-		background-image: image-set(
-			url(../images/main-top.webp) 2x,
-			url(../images/main-top.png) 1x
-		);
+  position: relative;
+  background: #118fc9;
+  overflow: hidden;
+  min-height: 100vh;
+  &::before {
+    content: "";
+    position: absolute;
+    // background-image: url(../images/main-top.png);
+    background-image: image-set(
+      url(../images/main-top.webp) 2x,
+      url(../images/main-top.png) 1x
+    );
 
-		background-repeat: no-repeat;
-		background-size: cover;
-		animation: backgroundZoomUp 2s ease-in forwards;
-		height: 100%;
-		width: 100%;
-	}
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: backgroundZoomUp 2s ease-in forwards;
+    height: 100%;
+    width: 100%;
+  }
 
-	&::after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		// background-image: url(../images/main-bottom.png);
-		background-image: image-set(
-			url(../images/main-bottom.webp) 2x,
-			url(../images/main-bottom.png) 1x
-		);
-		background-repeat: no-repeat;
-		background-position: center bottom;
-		background-size: contain;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    // background-image: url(../images/main-bottom.png);
+    background-image: image-set(
+      url(../images/main-bottom.webp) 2x,
+      url(../images/main-bottom.png) 1x
+    );
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
 
-		// background-position: 14% 100%;
-		// transform: scale(1.3);
+    // background-position: 14% 100%;
+    // transform: scale(1.3);
 
-		animation: backgroundZoomDown 2s ease-in forwards;
-		height: 100%;
-		width: 100%;
-		@media screen and (max-width: 992px) {
-			background-size: cover;
-		}
-	}
+    animation: backgroundZoomDown 2s ease-in forwards;
+    height: 100%;
+    width: 100%;
+    @media screen and (max-width: 992px) {
+      background-size: cover;
+    }
 
-	&__relative {
-		position: relative;
-		z-index: 1;
-	}
+    @media screen and (min-width: 1100px) {
+      background-size: cover;
+    }
+  }
 
-	@include flex-middle;
-	text-align: center;
-	@media screen and (max-width: 576px) {
-		min-height: 100vh;
-	}
-	&__wrap {
-		color: $white;
-		h1 {
-			max-width: 1076px;
-			width: 100%;
-			min-height: 78px;
-		}
-		p {
-			font-size: 24px;
-			margin: 0 auto 50px;
-			width: 100%;
-			max-width: 718px;
-			min-height: 43px;
-			@media screen and (max-width: 768px) {
-				font-size: 16px;
-			}
-		}
-	}
-	&__btn {
-		max-width: 208px;
-		width: 100%;
-		min-height: 40px;
-		margin: 0 auto;
-		color: $white;
-		margin-bottom: 111px;
-		@media screen and (max-width: 576px) {
-			margin-bottom: 70px;
-		}
-	}
-	.scroll {
-		position: relative;
-		color: $white;
-		font-size: 16px;
-		position: absolute;
-		left: 50%;
-		top: 90%;
-		transform: translate(-50%, 50%);
-		.circles {
-			display: block;
-			position: relative;
-			width: 100%;
-			max-width: 104px;
-			min-height: 104px;
-			margin: 0 auto;
+  &__relative {
+    position: relative;
+    z-index: 1;
+  }
 
-			span {
-				display: block;
-				transition: all 0.5s ease;
-				position: absolute;
-				left: 50%;
-				top: 50%;
-				transform: translate(-50%, -50%);
-			}
-			span.cirle1 {
-				width: 86px;
-				height: 86px;
-				border-radius: 50%;
-				background: rgba(#fff, 0.18);
-				animation: scrollAnim1 5s ease forwards infinite;
-			}
-			span.cirle2 {
-				width: 62px;
-				height: 62px;
-				border-radius: 50%;
-				background: rgba(#fff, 0.32);
-				animation: scrollAnim2 5s ease forwards infinite;
-			}
-			span.cirle3 {
-				width: 40px;
-				height: 40px;
-				border-radius: 50%;
-				background: rgba(#fff, 0.42);
-				border: 1px solid $blue;
-				animation: scrollAnim3 5s ease forwards infinite;
-			}
-		}
+  @include flex-middle;
+  text-align: center;
+  @media screen and (max-width: 576px) {
+    min-height: 100vh;
+  }
+  &__wrap {
+    color: $white;
+    h1 {
+      max-width: 1076px;
+      width: 100%;
+      min-height: 78px;
+    }
+    p {
+      font-size: 24px;
+      margin: 0 auto 50px;
+      width: 100%;
+      max-width: 718px;
+      min-height: 43px;
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
+      }
+    }
+  }
+  &__btn {
+    max-width: 208px;
+    width: 100%;
+    min-height: 40px;
+    margin: 0 auto;
+    color: $white;
+    margin-bottom: 111px;
+    @media screen and (max-width: 576px) {
+      margin-bottom: 70px;
+    }
+  }
+  .scroll {
+    position: relative;
+    color: $white;
+    font-size: 16px;
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, 50%);
 
-		svg {
-			position: absolute;
-			top: 80px;
-			left: 17px;
-		}
-	}
+	@media screen and (max-height: 675px) {
+		top: 70%;
+    }
 
-	@media screen and (max-width: 600px) {
-		&::before {
-			content: '';
-			position: absolute;
-			// background-image: url(../images/bg-mobile.png);
-			background-image: image-set(
-				url(../images/bg-mobile.webp) 2x,
-				url(../images/bg-mobile.png) 1x
-			);
-			background-repeat: no-repeat;
-			background-size: cover;
-			animation: zoomDown 2s ease-in forwards;
-			height: 100%;
-			width: 100%;
-		}
+    .circles {
+      display: block;
+      position: relative;
+      width: 100%;
+      max-width: 104px;
+      min-height: 104px;
+      margin: 0 auto;
 
-		&::after {
-			content: '';
-			display: none;
-		}
-	}
+      span {
+        display: block;
+        transition: all 0.5s ease;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      span.cirle1 {
+        width: 86px;
+        height: 86px;
+        border-radius: 50%;
+        background: rgba(#fff, 0.18);
+        animation: scrollAnim1 5s ease forwards infinite;
+      }
+      span.cirle2 {
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        background: rgba(#fff, 0.32);
+        animation: scrollAnim2 5s ease forwards infinite;
+      }
+      span.cirle3 {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(#fff, 0.42);
+        border: 1px solid $blue;
+        animation: scrollAnim3 5s ease forwards infinite;
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: 80px;
+      left: 17px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    &::before {
+      content: "";
+      position: absolute;
+      // background-image: url(../images/bg-mobile.png);
+      background-image: image-set(
+        url(../images/bg-mobile.webp) 2x,
+        url(../images/bg-mobile.png) 1x
+      );
+      background-repeat: no-repeat;
+      background-size: cover;
+      animation: zoomDown 2s ease-in forwards;
+      height: 100%;
+      width: 100%;
+    }
+
+    &::after {
+      content: "";
+      display: none;
+    }
+  }
 }
