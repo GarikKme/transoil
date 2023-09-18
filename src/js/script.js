@@ -245,12 +245,13 @@ const initAnimations = () => {
 	initLocation();
 };
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('scroll', () => {
 	initAnimations();
 });
 
-document.addEventListener('scroll', () => {
+document.addEventListener('DOMContentLoaded', () => {
 	initAnimations();
+	lazySizes.init();
 });
 
 //popup script open
