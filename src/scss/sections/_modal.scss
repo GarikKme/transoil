@@ -1,0 +1,95 @@
+.box {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	justify-content: center;
+	align-items: center;
+	background: rgba(250, 251, 247, 0.38);
+	backdrop-filter: blur(5px);
+	z-index: 1001;
+	//display: none;
+	transition: opacity 0.3s ease;
+	visibility: hidden;
+	opacity: 0;
+	&.active {
+		display: flex;
+		visibility: visible;
+		opacity: 1;
+	}
+	&-modal {
+		background: $white;
+		border-radius: 0px 60px;
+		padding: 19px 50px;
+		min-width: 660px;
+		min-height: 430px;
+		position: relative;
+		&::before {
+			content: '';
+			display: block;
+			width: 121px;
+			height: 263px;
+			background: $blue;
+			position: absolute;
+			left: -45px;
+			top: -30px;
+			z-index: -2;
+		}
+		&::after {
+			content: '';
+			display: block;
+			width: 126px;
+			height: 345px;
+			background: $blue;
+			position: absolute;
+			right: -45px;
+			bottom: -30px;
+			z-index: -2;
+		}
+		@media screen and (max-width: 992px) {
+			min-width: 80%;
+		}
+		@media screen and (max-width: 400px) {
+			padding: 19px 30px;
+		}
+	}
+	.form {
+		display: flex;
+		flex-direction: column;
+		label {
+			font-size: 16px;
+			color: $black;
+			line-height: 32px;
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 11px;
+		}
+		input {
+			padding: 12px 28px;
+			background: #f2f2f2;
+			border: 0;
+			&::placeholder {
+				color: #b6b6b6;
+				font-size: 16px;
+			}
+		}
+		textarea {
+			background: #f2f2f2;
+			padding: 12px 28px;
+			min-height: 120px;
+			resize: none;
+			border: 0;
+			&::placeholder {
+				color: #b6b6b6;
+				font-size: 16px;
+			}
+		}
+		.btn {
+			border: 0;
+			margin-top: 25px;
+			padding: 13px 50px;
+			min-width: 160px;
+		}
+	}
+}

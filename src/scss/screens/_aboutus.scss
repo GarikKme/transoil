@@ -1,76 +1,78 @@
 .aboutUs {
-  position: relative;
-  padding-top: 50px;
-  padding-bottom: 80px;
+	position: relative;
+	padding-top: 50px;
+	padding-bottom: 80px;
 
-  @media screen and (max-width: 992px) {
-    padding-top: 33px;
-  }
+	@media screen and (max-width: 992px) {
+		padding-top: 33px;
+	}
 
-  //&__number {
-  //  left: -20px !important;
-  //  top: -118px !important;
-  //}
-  //
-  //@media screen and (max-width: 992px) {
-  //  &__number {
-  //    left: 5px !important;
-  //    top: -60px !important;
-  //  }
-  //}
+	//&__number {
+	//  left: -20px !important;
+	//  top: -118px !important;
+	//}
+	//
+	//@media screen and (max-width: 992px) {
+	//  &__number {
+	//    left: 5px !important;
+	//    top: -60px !important;
+	//  }
+	//}
 
-  &__wrap-content {
-    padding-top: 100px;
+	&__wrap-content {
+		padding-top: 100px;
 
-    h2 {
-      margin-bottom: 65px;
-      @media screen and (max-width: 992px) {
-        padding-left: 15px;
-      }
-    }
+		h2 {
+			margin-bottom: 65px;
+			@media screen and (max-width: 992px) {
+				padding-left: 15px;
+			}
+		}
 
-    p {
-      max-width: 609px;
-      font-size: 18px;
-      margin-bottom: 15px;
-      line-height: 2;
+		p {
+			max-width: 609px;
+			font-size: 18px;
+			margin-bottom: 15px;
+			line-height: 2;
 
-      span {
-        color: $blue;
-        font-weight: 700;
-      }
+			span {
+				color: $blue;
+				font-weight: 700;
+			}
 
-      @media screen and (max-width: 992px) {
-        font-size: 16px;
-        line-height: 31px;
-      }
-    }
+			@media screen and (max-width: 992px) {
+				font-size: 16px;
+				line-height: 31px;
+			}
+		}
 
-    .btn {
-      margin: unset;
-      margin-top: 25px;
-      @media screen and (max-width: 992px) {
-        margin: 25px auto 0;
-      }
-    }
-  }
+		.btn {
+			margin: unset;
+			margin-top: 25px;
+			padding: 10px 20px;
+			width: 100%;
+			@media screen and (max-width: 992px) {
+				margin: 25px auto 0;
+			}
+		}
+	}
 
-  &__wrap-image {
-    position: absolute;
-    right: 0;
-    top: 50px;
-    border-radius: 60px 0 0 0;
-    overflow: hidden;
+	&__wrap-image {
+		position: absolute;
+		right: 0;
+		top: 50px;
+		border-radius: 60px 0 0 0;
+		overflow: hidden;
 
-    @media screen and (max-width: 1590px) {
-      max-width: 40%;
-    }
-    @media screen and (max-width: 1290px) {
-      max-width: 30%;
-      top: 150px;
-    }
-    @media screen and (max-width: 992px) {
-      display: none;
-    }
-  }
+		@media screen and (max-width: 1590px) {
+			max-width: 40%;
+		}
+		@media screen and (max-width: 1290px) {
+			max-width: 30%;
+			top: 150px;
+		}
+		@media screen and (max-width: 992px) {
+			display: none;
+		}
+	}
 }
