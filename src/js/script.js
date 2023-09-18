@@ -2,7 +2,10 @@ function initScript() {
   const mediaQuery = window.matchMedia("(max-width: 992px)");
   const bars = document.querySelector(".bars"),
     navOverlay = document.querySelector(".nav-overlay"),
-    menu = document.querySelector(".header-nav");
+    menu = document.querySelector(".header-nav"),
+    menuMobile = document.querySelector(".header__menu.mobile");
+
+  const links = menuMobile.querySelectorAll(".header__menu-item");
 
   function resizeNav() {
     // Set the circle radius to the length of the window diagonal,
@@ -25,9 +28,12 @@ function initScript() {
     document.querySelector(".header-nav").style.height = "unset";
   }
 
-  // Set up click and window resize callbacks, then init the nav.
-  bars.addEventListener("click", function () {
-    this.classList.toggle("open");
+  const toggleBurger = (e, isBurgerIcon = false) => {
+    if (isBurgerIcon) {
+      e.target.classList.toggle("open");
+    } else {
+      bars.classList.remove("open");
+    }
     navOverlay.classList.toggle("open");
     menu.classList.toggle("open");
     document.querySelector("body").classList.toggle("openMenu");
@@ -36,6 +42,17 @@ function initScript() {
       .forEach((item) => item.classList.toggle("show"));
     const wrapFadeUp = document.querySelector(".fade-up.header__wrapper");
     wrapFadeUp.classList.toggle("show");
+  };
+
+  // Set up click and window resize callbacks, then init the nav.
+  bars.addEventListener("click", function (e) {
+    toggleBurger(e, true);
+  });
+
+  links.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      toggleBurger(e);
+    });
   });
 
   //fade-up header__wrapper
