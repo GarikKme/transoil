@@ -37,9 +37,9 @@
 
   &__wrap-map_markers {
     display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -47,59 +47,146 @@
 
     .marker1 {
       position: absolute;
-      // left: 139px;
-      top: 165px;
-      right: 507px;
+      z-index: 1;
+      left: 50%;
+      top: 15%;
+      transform: translateX(-208%);
     }
 
     .marker2 {
       position: absolute;
-      // left: 470px;
-      right: 207px;
-      top: 111px;
+      z-index: 1;
+      left: 50%;
+      top: 7%;
+      transform: translateX(-7%);
     }
 
     .marker3 {
       position: absolute;
-      // left: 659px;
-      right: 36px;
-      top: 207px;
+      z-index: 1;
+      left: 50%;
+      top: 22%;
+      transform: translateX(108%);
+    }
+
+    @media screen and (max-width: 1500px) {
+      .marker1 {
+        top: 17.5%;
+        transform: scale(0.9) translateX(-199%);
+      }
+
+      .marker2 {
+        top: 11%;
+        transform: scale(0.9) translateX(-14%);
+      }
+
+      .marker3 {
+        top: 23%;
+        transform: scale(0.9) translateX(90%);
+      }
+    }
+
+    @media screen and (max-width: 1350px) {
+      .marker1 {
+        top: 20.4%;
+        transform: scale(0.7) translateX(-190%);
+      }
+
+      .marker2 {
+        top: 16%;
+        transform: scale(0.7) translateX(-17%);
+      }
+
+      .marker3 {
+        top: 25%;
+        transform: scale(0.7) translateX(81%);
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      .marker1 {
+        top: 19.4%;
+        transform: scale(0.7) translateX(-190%);
+      }
+
+      .marker2 {
+        top: 15%;
+        transform: scale(0.7) translateX(-17%);
+      }
+
+      .marker3 {
+        top: 23%;
+        transform: scale(0.7) translateX(81%);
+      }
+    }
+
+    @media screen and (max-width: 1100px) {
+      .marker1 {
+        top: 20.4%;
+        transform: scale(0.6) translateX(-212%);
+      }
+
+      .marker2 {
+        top: 16.5%;
+        transform: scale(0.6) translateX(-28%);
+      }
+
+      .marker3 {
+        top: 23.8%;
+        transform: scale(0.6) translateX(75%);
+      }
     }
   }
 
   &__wrap-map-template {
     position: absolute;
-    max-width: 723px;
+    max-width: 824px;
     width: 100%;
-    top: 150px;
-    right: 0;
-    transform: scale(1.4);
+    top: 100px;
+    right: 50%;
+    transform: translateX(50%);
+    // transform: scale(1.4);
+
+    @media screen and (max-width: 1500px) {
+      max-width: 733px;
+      transform: scale(0.9) translateX(55%);
+    }
+
+    @media screen and (max-width: 1350px) {
+      max-width: 600px;
+      transform: scale(0.8) translateX(65%);
+    }
+
+    @media screen and (max-width: 1100px) {
+      max-width: 548px;
+      transform: scale(0.8) translateX(65%);
+    }
   }
 
   &__wrap-map-template.visible {
-    animation: locationMap 1s ease-in-out forwards;
+    // animation: locationMap 1s ease-in-out forwards;
   }
 
   @media screen and (max-width: 1470px) {
     &__wrap-map-scale {
-      transform: scale(0.9) translateX(50px);
-      min-height: 700px;
+      // transform: scale(0.9);
+      // min-height: 700px;
     }
 
     &__wrap-map_markers {
       right: 0%;
-      width: 120%;
+      width: 100%;
       left: unset;
     }
 
     &__wrap-map-template {
-      width: unset;
+      width: 100%;
     }
   }
 
   @media screen and (max-width: 1315px) {
     &__wrap-map-scale {
-      transform: scale(0.8) translateX(90px);
+      // transform: scale(0.8);
     }
 
     &__wrap-map_markers {
