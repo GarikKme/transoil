@@ -7,12 +7,12 @@
     position: absolute;
     // background-image: url(../images/main-top.png);
     background-image: image-set(
-      url(../images/main-top.webp),
-      url(../images/main-top.png)
+      url(../images/main-top.webp) 2x,
+      url(../images/main-top.png) 1x
     );
     background-repeat: no-repeat;
     background-size: cover;
-    animation: backgroundZoomUp 3s ease-in forwards;
+    animation: backgroundZoomUp 2s ease-in forwards;
     height: 100%;
     width: 100%;
   }
@@ -23,8 +23,8 @@
     bottom: 0;
     // background-image: url(../images/main-bottom.png);
     background-image: image-set(
-      url(../images/main-bottom.webp),
-      url(../images/main-bottom.png)
+      url(../images/main-bottom.webp) 2x,
+      url(../images/main-bottom.png) 1x
     );
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -33,7 +33,7 @@
     // background-position: 14% 100%;
     // transform: scale(1.3);
 
-    animation: backgroundZoomDown 3s ease-in forwards;
+    animation: backgroundZoomDown 2s ease-in forwards;
     height: 100%;
     width: 100%;
     @media screen and (max-width: 992px) {
@@ -110,14 +110,14 @@
         height: 86px;
         border-radius: 50%;
         background: rgba(#fff, 0.18);
-        animation: scrollAnim1 6s ease forwards infinite;
+        animation: scrollAnim1 5s ease forwards infinite;
       }
       span.cirle2 {
         width: 62px;
         height: 62px;
         border-radius: 50%;
         background: rgba(#fff, 0.32);
-        animation: scrollAnim2 6s ease forwards infinite;
+        animation: scrollAnim2 5s ease forwards infinite;
       }
       span.cirle3 {
         width: 40px;
@@ -125,7 +125,7 @@
         border-radius: 50%;
         background: rgba(#fff, 0.42);
         border: 1px solid $blue;
-        animation: scrollAnim3 6s ease forwards infinite;
+        animation: scrollAnim3 5s ease forwards infinite;
       }
     }
 
@@ -142,12 +142,12 @@
       position: absolute;
       // background-image: url(../images/bg-mobile.png);
       background-image: image-set(
-        url(../images/bg-mobile.webp),
-        url(../images/bg-mobile.png)
+        url(../images/bg-mobile.webp) 2x,
+        url(../images/bg-mobile.png) 1x
       );
       background-repeat: no-repeat;
       background-size: cover;
-      animation: zoomDown 3s ease-in forwards;
+      animation: zoomDown 2s ease-in forwards;
       height: 100%;
       width: 100%;
     }

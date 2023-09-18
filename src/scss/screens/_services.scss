@@ -219,23 +219,23 @@
     }
 
     &:nth-child(1) {
-      background: image-set(url("../images/serv1.webp"),url("../images/serv1.png")) top/cover no-repeat;
+      background: image-set(url("../images/serv1.webp") 2x,url("../images/serv1.png") 1x) top/cover no-repeat;
     }
 
     &:nth-child(2) {
       // background: url("../images/serv2.png") top/cover no-repeat;
       background: image-set(
-                      url("../images/serv2.webp"),
-                      url("../images/serv2.png")
+                      url("../images/serv2.webp") 2x,
+                      url("../images/serv2.png") 1x
       ) top/cover no-repeat;
     }
 
     &:nth-child(3) {
       // background: url("../images/serv3.png") top/cover no-repeat;
       background: image-set(
-                      url("../images/serv3.webp"),
-                      url("../images/serv3.png")
-      ) top/cover no-repeat;
+                      url("../images/serv3.webp") 2x,
+                      url("../images/serv3.png") 1x
+      ) top/cover no-repeat; 
     }
 
     @media screen and (max-width: 992px) {

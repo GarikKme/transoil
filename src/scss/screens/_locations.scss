@@ -77,7 +77,7 @@
   }
 
   &__wrap-map-template.visible {
-    animation: locationMap 2s ease-in-out forwards;
+    animation: locationMap 1s ease-in-out forwards;
   }
 
   @media screen and (max-width: 1470px) {
@@ -199,7 +199,7 @@
       }
 
       &.visible::before {
-        animation: slideInLeftLocation 2s ease-in-out forwards;
+        animation: slideInLeftLocation 1s ease-in-out forwards;
       }
     }
 
@@ -220,7 +220,7 @@
 
         h3.visible,
         h4.visible {
-          animation: slideInRight 2s ease-in-out forwards;
+          animation: slideInRight 1s ease-in-out forwards;
         }
       }
     }
@@ -276,7 +276,7 @@
     }
 
     &.visible::before {
-      animation: slideTop 2s ease-in-out forwards;
+      animation: slideTop 1s ease-in-out forwards;
     }
 
     @media screen and (max-width: 1000px) {
