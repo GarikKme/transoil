@@ -1,6 +1,6 @@
 .locations {
   position: relative;
-  padding-top: 100px;
+  margin-top: 100px;
   @media screen and (max-width: 992px) {
     padding-top: 0;
   }
@@ -82,7 +82,7 @@
 
   @media screen and (max-width: 1470px) {
     &__wrap-map-scale {
-      transform: scale(0.8);
+      transform: scale(0.9) translateX(50px);
       min-height: 700px;
     }
 
@@ -99,7 +99,7 @@
 
   @media screen and (max-width: 1315px) {
     &__wrap-map-scale {
-      transform: scale(0.7) translateX(100px);
+      transform: scale(0.8) translateX(90px);
     }
 
     &__wrap-map_markers {

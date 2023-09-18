@@ -1,176 +1,182 @@
 .header {
-	padding: 20px 0;
-	position: relative;
-	background: rgba(0, 140, 207, 0.74);
-	position: absolute;
-	width: 100%;
-	left: 0;
-	top: 0;
-	z-index: 2;
-	@media screen and (max-width: 1200px) {
-		padding: 22px 0;
-	}
+  padding: 20px 0;
+  position: relative;
+  background: rgba(0, 140, 207, 0.74);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  @media screen and (max-width: 1200px) {
+    padding: 22px 0;
+  }
 
-	&__wrapper {
-		min-height: 39px;
-		&.fade-up.show {
-			overflow: inherit;
-		}
-	}
+  &__wrapper {
+    min-height: 39px;
+    &.fade-up.show {
+      overflow: inherit;
+    }
+  }
 
-	&__nav {
-		@include between-center;
+  &__nav {
+    @include between-center;
 
-		&.sticky {
-			position: fixed;
-			width: 100%;
-			z-index: 10002;
-			background: #fff;
-			left: 0;
-			top: 0;
-			padding: 24px 15px;
-		}
-	}
+    &.sticky {
+      position: fixed;
+      width: 100%;
+      z-index: 10002;
+      background: #fff;
+      left: 0;
+      top: 0;
+      padding: 24px 15px;
+    }
+  }
 
-	&-nav {
-		@media screen and (max-width: 992px) {
-			overflow: hidden;
-			width: 100%;
-			margin-right: 0;
-			transition: ease-in-out 0.25s;
-			transition-delay: 0s;
-			visibility: hidden;
-			opacity: 0;
-			position: fixed;
-			left: 0;
-			top: 0;
-			z-index: 9999;
-			&.open {
-				visibility: visible;
-				opacity: 1;
-				transition: ease-in-out 0.5s;
-				transition-delay: 0.25s;
-			}
-		}
-	}
+  &-nav {
+    @media screen and (max-width: 992px) {
+      overflow: hidden;
+      width: 100%;
+      margin-right: 0;
+      transition: ease-in-out 0.25s;
+      transition-delay: 0s;
+      visibility: hidden;
+      opacity: 0;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 9999;
+      &.open {
+        visibility: visible;
+        opacity: 1;
+        transition: ease-in-out 0.5s;
+        transition-delay: 0.25s;
+      }
+    }
+  }
 
-	&__menu {
-		@include between-center;
-		gap: 75px;
+  &__menu-item-lang-mobile {
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+    color: $white-links;
+  }
 
-		li {
-			a {
-				position: relative;
-				font-weight: 500;
-				font-size: 16px;
-				color: $white-links;
+  &__menu {
+    @include between-center;
+    gap: 75px;
 
-				&::after {
-					content: '';
-					display: block;
-					width: 100%;
-					height: 4px;
-					position: absolute;
-					left: 0;
-					bottom: -5px;
-					border-radius: 10px;
-					background: $white;
-					transform-origin: center;
-					transform: scaleX(0);
-					transition: all 0.3s;
-				}
+    li {
+      a {
+        position: relative;
+        font-weight: 500;
+        font-size: 16px;
+        color: $white-links;
 
-				&:hover::after {
-					transform: scaleX(1);
-				}
-				@media screen and (max-width: 992px) {
-					font-size: 16px;
-					color: $white;
-				}
-			}
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 4px;
+          position: absolute;
+          left: 0;
+          bottom: -5px;
+          border-radius: 10px;
+          background: $white;
+          transform-origin: center;
+          transform: scaleX(0);
+          transition: all 0.3s;
+        }
 
-			//&.active {
-			//	a::after {
-			//		transform: scaleX(1);
-			//	}
-			//}
-			@media screen and (max-width: 992px) {
-				margin-bottom: 42px;
-				width: 100%;
-				opacity: 0;
-				transform: scaleX(0) translateX(-260px);
-				transition: none;
-				&.show {
-					opacity: 1;
-					transform: scaleX(1) translateX(0);
-					transition: all 0.7s ease-out;
-					&:nth-child(2) {
-						transition-delay: 0.2s;
-					}
-					&:nth-child(3) {
-						transition-delay: 0.3s;
-					}
-					&:nth-child(4) {
-						transition-delay: 0.4s;
-					}
-					&:nth-child(5) {
-						transition-delay: 0.5s;
-					}
-					&:not(:last-child) {
-						margin-right: 0;
-					}
-				}
-			}
-		}
+        &:hover::after {
+          transform: scaleX(1);
+        }
+        @media screen and (max-width: 992px) {
+          font-size: 16px;
+          color: $white;
+        }
+      }
 
-		@media screen and (max-width: 1200px) {
-			gap: 31px;
-		}
+      //&.active {
+      //	a::after {
+      //		transform: scaleX(1);
+      //	}
+      //}
+      @media screen and (max-width: 992px) {
+        margin-bottom: 42px;
+        width: 100%;
+        opacity: 0;
+        transform: scaleX(0) translateX(-260px);
+        transition: none;
+        &.show {
+          opacity: 1;
+          transform: scaleX(1) translateX(0);
+          transition: all 0.7s ease-out;
+          &:nth-child(2) {
+            transition-delay: 0.2s;
+          }
+          &:nth-child(3) {
+            transition-delay: 0.3s;
+          }
+          &:nth-child(4) {
+            transition-delay: 0.4s;
+          }
+          &:nth-child(5) {
+            transition-delay: 0.5s;
+          }
+          &:not(:last-child) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
 
-		@media screen and (max-width: 992px) {
-			text-align: center;
-			overflow: hidden;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			margin-left: 0;
-			width: 100%;
-			height: 100vh;
-			position: fixed;
-			left: 0;
-			top: 0;
-			z-index: 999;
-			display: none;
-		}
-	}
+    @media screen and (max-width: 1200px) {
+      gap: 31px;
+    }
 
-	&__menu.mobile {
-		display: none;
-		@media screen and (max-width: 992px){
-			display: flex;
-		}
-	}
+    @media screen and (max-width: 992px) {
+      text-align: center;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0;
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 999;
+      display: none;
+    }
+  }
 
+  &__menu.mobile {
+    display: none;
+    @media screen and (max-width: 992px) {
+      display: flex;
+    }
+  }
 
-	&__nav-lang {
-		select {
-			border: none;
-			background: transparent;
-			cursor: pointer;
-			color: $white;
-			&:focus-visible {
-				outline: none;
-			}
-		}
-		@media screen and (max-width: 992px){
-			display: none;
-		}
-	}
-	&__nav-lang.mobile {
-		display: none;
-		@media screen and (max-width: 992px){
-			display: block;
-		}
-	}
+  &__nav-lang {
+    select {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      color: $white;
+      &:focus-visible {
+        outline: none;
+      }
+    }
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
+  }
+  &__nav-lang.mobile {
+    display: none;
+    @media screen and (max-width: 992px) {
+      display: block;
+    }
+  }
 }

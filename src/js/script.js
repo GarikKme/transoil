@@ -50,9 +50,11 @@ function initScript() {
   });
 
   links.forEach((link) => {
-    link.addEventListener("click", function (e) {
-      toggleBurger(e);
-    });
+    if (!link.classList.contains("header__menu-item-lang-mobile")) {
+      link.addEventListener("click", function (e) {
+        toggleBurger(e);
+      });
+    }
   });
 
   //fade-up header__wrapper
