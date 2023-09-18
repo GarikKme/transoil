@@ -180,7 +180,7 @@ const initAnimations = () => {
 
 	const initServices = () => {
 		const services = document.querySelector('#services');
-		const isVisible = isInView(services, 300);
+		const isVisible = isInView(services);
 
 		if (isVisible) {
 			const number = services.querySelector('.zoom-appear');
@@ -197,7 +197,7 @@ const initAnimations = () => {
 
 	const initGlobal = () => {
 		const global = document.querySelector('#global');
-		const isVisible = isInView(global, 300);
+		const isVisible = isInView(global);
 
 		if (isVisible) {
 			const numbers = global.querySelectorAll('.zoom-appear');
@@ -216,7 +216,7 @@ const initAnimations = () => {
 
 	const initLocation = () => {
 		const locations = document.querySelector('#locations');
-		const isVisible = isInView(locations, 300);
+		const isVisible = isInView(locations);
 
 		if (isVisible) {
 			const slidesTop = locations.querySelector('.locations__wrap-content_bg');
