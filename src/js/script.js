@@ -157,6 +157,22 @@ const animations = {
       isElementsCreated: false,
       isElementsFired: false,
     },
+    {
+      isElementsCreated: false,
+      isElementsFired: false,
+    },
+    {
+      isElementsCreated: false,
+      isElementsFired: false,
+    },
+    {
+      isElementsCreated: false,
+      isElementsFired: false,
+    },
+    {
+      isElementsCreated: false,
+      isElementsFired: false,
+    },
   ],
 };
 

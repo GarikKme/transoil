@@ -80,12 +80,37 @@
     animation: locationMap 1s ease-in-out forwards;
   }
 
-  @media screen and (max-width: 1470px) {
-    &__wrap-map-scale {
-      transform: scale(0.9) translateX(50px);
-      min-height: 700px;
+  &__wrap-map-scale {
+    height: 100%;
+    transform: scale(1.2) translateX(-116px) translateY(21px);
+
+    @media screen and (max-width: 1680px) {
+      transform: scale(1.1) translateX(-60px) translateY(21px);
     }
 
+    @media screen and (max-width: 1500px) {
+      transform: scale(1) translateX(-30px) translateY(21px);
+    }
+
+    @media screen and (max-width: 1380px) {
+      transform: scale(0.9) translateX(9px) translateY(18px);
+    }
+
+    @media screen and (max-width: 1240px) {
+      transform: scale(0.8) translateX(60px) translateY(14px);
+    }
+
+    @media screen and (max-width: 1080px) {
+      transform: scale(0.7) translateX(80px) translateY(14px);
+    }
+  }
+
+  // &__wrap-map-scale {
+  //   transform: scale(0.9) translateX(50px);
+  //   min-height: 700px;
+  // }
+
+  @media screen and (max-width: 1470px) {
     &__wrap-map_markers {
       right: 0%;
       width: 120%;
@@ -98,9 +123,9 @@
   }
 
   @media screen and (max-width: 1315px) {
-    &__wrap-map-scale {
-      transform: scale(0.8) translateX(90px);
-    }
+    // &__wrap-map-scale {
+    //   transform: scale(0.8) translateX(90px);
+    // }
 
     &__wrap-map_markers {
       width: 140%;
