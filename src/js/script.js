@@ -297,6 +297,8 @@ document.addEventListener("DOMContentLoaded", () => {
 const boxModal = document.querySelector(".box");
 const btnsOpenModal = document.querySelectorAll(".popup");
 const body = document.querySelector("body");
+const formBtn = document.querySelector('.form__btn');
+const thanks = document.querySelector('thx');
 
 btnsOpenModal.forEach((item) => {
   item.addEventListener("click", (e) => {
@@ -314,3 +316,10 @@ boxModal.addEventListener("click", function (e) {
     body.classList.remove("open");
   }
 });
+
+formBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  setTimeout(() => {
+    thanks.classList.add('show');
+  }, 2000);
+})
