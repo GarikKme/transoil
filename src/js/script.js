@@ -297,8 +297,12 @@ document.addEventListener("DOMContentLoaded", () => {
 const boxModal = document.querySelector(".box");
 const btnsOpenModal = document.querySelectorAll(".popup");
 const body = document.querySelector("body");
-const formBtn = document.querySelector('.form__btn');
-const thanks = document.querySelector('thx');
+const formBtn = document.querySelector(".form__btn");
+const thanks = document.querySelector(".thx");
+const inputs = boxModal.querySelectorAll(".box-input");
+const boxForm = document.querySelector("#boxForm");
+
+console.log(boxForm);
 
 btnsOpenModal.forEach((item) => {
   item.addEventListener("click", (e) => {
@@ -314,12 +318,33 @@ boxModal.addEventListener("click", function (e) {
   if (e.target === boxModal) {
     this.classList.toggle("active");
     body.classList.remove("open");
+    thanks.classList.remove("show");
   }
 });
 
-formBtn.addEventListener('click', (e) => {
+boxForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  setTimeout(() => {
-    thanks.classList.add('show');
-  }, 2000);
-})
+
+  const sendData = async () => {
+    await fetch("message.php", {
+      method: "POST",
+      body: JSON.stringify({
+        name: inputs[0].value,
+        email: inputs[1].value,
+        message: inputs[2].value,
+      }),
+    });
+
+    inputs.forEach((input) => (input.value = ""));
+
+    thanks.classList.add("show");
+
+    setTimeout(() => {
+      boxModal.classList.toggle("active");
+      body.classList.remove("open");
+      thanks.classList.remove("show");
+    }, 1500);
+  };
+
+  sendData();
+});
