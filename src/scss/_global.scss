@@ -17,6 +17,7 @@ body {
 
   &.openMenu {
     overflow: hidden;
+    height: 100vh;
     max-width: 100vw;
   }
 
@@ -25,6 +26,7 @@ body {
   }
   &.open {
     overflow: hidden;
+    height: 100vh;
   }
 }
 
@@ -114,7 +116,9 @@ textarea,
 textarea:focus {
   outline: none;
 }
-input[type="text"], input[type="email"], textarea {
+input[type="text"],
+input[type="email"],
+textarea {
   text-size-adjust: 100%; /* Отключаем автозум */
   -webkit-text-size-adjust: 100%;
 }
@@ -382,7 +386,7 @@ h2 {
   p {
     padding: 20px;
     // border-radius: 20px;
-	border: 1px solid #008ccf;
+    border: 1px solid #008ccf;
     font-size: 16px;
     color: $black;
     background: $white;
