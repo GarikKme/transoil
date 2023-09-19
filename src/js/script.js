@@ -297,14 +297,12 @@ document.addEventListener("DOMContentLoaded", () => {
 const boxModal = document.querySelector(".box");
 const btnsOpenModal = document.querySelectorAll(".popup");
 const body = document.querySelector("body");
-const overlay = document.querySelector(".overlay");
 
 btnsOpenModal.forEach((item) => {
   item.addEventListener("click", (e) => {
     e.preventDefault();
     boxModal.classList.toggle("active");
-    overlay.classList.toggle("active");
-    body.classList.toggle("open");
+    body.classList.add("open");
   });
 });
 
@@ -313,6 +311,6 @@ btnsOpenModal.forEach((item) => {
 boxModal.addEventListener("click", function (e) {
   if (e.target === boxModal) {
     this.classList.toggle("active");
-    body.classList.toggle("open");
+    body.classList.remove("open");
   }
 });

@@ -114,6 +114,10 @@ textarea,
 textarea:focus {
   outline: none;
 }
+input[type="text"], input[type="email"], textarea {
+  text-size-adjust: 100%; /* Отключаем автозум */
+  -webkit-text-size-adjust: 100%;
+}
 
 textarea {
   resize: none;
