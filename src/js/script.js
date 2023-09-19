@@ -3,7 +3,8 @@ function initScript() {
   const bars = document.querySelector(".bars"),
     navOverlay = document.querySelector(".nav-overlay"),
     menu = document.querySelector(".header-nav"),
-    menuMobile = document.querySelector(".header__menu.mobile");
+    menuMobile = document.querySelector(".header__menu.mobile"),
+    headerAnim = document.querySelector("#headerAnim");
 
   const links = menuMobile.querySelectorAll(".header__menu-item");
 
@@ -34,6 +35,8 @@ function initScript() {
     } else {
       bars.classList.remove("open");
     }
+
+    headerAnim.classList.add("overflowVisible");
     navOverlay.classList.toggle("open");
     menu.classList.toggle("open");
     document.querySelector("body").classList.toggle("openMenu");
@@ -294,7 +297,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const boxModal = document.querySelector(".box");
 const btnsOpenModal = document.querySelectorAll(".popup");
 const body = document.querySelector("body");
-const overlay = document.querySelector('.overlay');
+const overlay = document.querySelector(".overlay");
 
 btnsOpenModal.forEach((item) => {
   item.addEventListener("click", (e) => {
@@ -308,9 +311,8 @@ btnsOpenModal.forEach((item) => {
 //close popup
 
 boxModal.addEventListener("click", function (e) {
-  if(e.target === boxModal) {
+  if (e.target === boxModal) {
     this.classList.toggle("active");
     body.classList.toggle("open");
   }
-
 });
