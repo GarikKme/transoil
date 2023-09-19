@@ -171,12 +171,10 @@
 
 @keyframes backgroundZoomUp {
   0% {
-    background-position: 10% 0;
-    transform: scale(1) translate(0, -100px);
+    transform: scale(1);
   }
   100% {
-    background-position: 23% 33%;
-    transform: scale(1.2) translateX(-50px);
+    transform: scale(1.3);
   }
 }
 
