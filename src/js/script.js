@@ -1,3 +1,5 @@
+const { message } = require("laravel-mix/src/Log");
+
 function initScript() {
   const mediaQuery = window.matchMedia("(max-width: 992px)");
   const bars = document.querySelector(".bars"),
@@ -276,10 +278,26 @@ const initAnimations = () => {
     }
   };
 
+  const initForm = () => {
+    const contacts = document.querySelector('#contacts');
+    const contactsTriger = document.querySelector('#contact-screen')
+    const isVisible = isInView(contactsTriger);
+
+    if(isVisible){
+      const slideInRight = contactsTriger.querySelectorAll('.slideInRight')
+      const slideInLeft = contactsTriger.querySelectorAll('.slideInLeft')
+      const number = contactsTriger.querySelector('.zoom-appear')
+      number.classList.add('visible')
+      slideInRight.forEach((slide) => slide.classList.add("visible"))
+      slideInLeft.forEach((slide) => slide.classList.add("visible"))
+    }
+  }
+
   initFadeUp();
   initAbout();
   initServices();
   initGlobal();
+  initForm();
   initLocation();
 };
 
@@ -348,3 +366,83 @@ boxForm.addEventListener("submit", (e) => {
 
   sendData();
 });
+
+
+//modal window script
+
+const modal = document.querySelector('.services__modal-wrap')
+const modalTriggerButtons = document.querySelectorAll('.modal-trigger')
+const closeCross = document.querySelectorAll('.cross__line')
+const cross = document.querySelector('.cross')
+
+const openCross = () => {
+  closeCross.forEach((cross) => {
+    cross.classList.remove('close')
+  })
+}
+
+const closeCrossHandler = () => {
+  closeCross.forEach((cross) => {
+    cross.classList.add('close')
+  })
+}
+
+modalTriggerButtons.forEach((button) => {    //open modal
+  button.addEventListener('click', () => {
+    modal.classList.remove('hidden')
+    document.querySelector('body').classList.add('pure')
+    setTimeout(openCross, 5)
+  }
+  )
+})
+
+const closeModal = () => {                   //close modal 
+  modal.classList.add('hidden')
+  closeCrossHandler()
+  document.querySelector('body').classList.remove('pure')
+  console.log('close modal')
+}
+
+cross.addEventListener('click', () => {
+  closeModal()
+})
+
+window.addEventListener('click', (e) => {
+  if(e.target === modal){
+    closeModal()
+    console.log('close')
+  }
+})
+
+window.addEventListener('keydown', (e) => {
+  if(e.key === 'Escape'){
+    closeModal()
+  }
+})
+
+//end of modal window script
+
+//contact form script
+
+const contactInputs = document.querySelectorAll('.contact__input')
+const contactForm = document.querySelector('.contact__form')
+
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  // const sendData = async () => {
+  //   await fetch("message.php", {
+  //     method: "POST",
+  //     body: JSON.stringify({
+  //       name: contactInputs[0].value,
+  //       email: contactInputs[1].value,
+  //       message: contactInputs[2].value,
+  //     }),
+  //   });
+  // }
+
+})
+
+//end of contact form script
+
+
