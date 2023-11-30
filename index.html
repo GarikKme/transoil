@@ -473,13 +473,15 @@
         <!--End of the proposals -->
         <!-- services -->
         <section class="services" id="services">
-          <div class="services__modal-wrap hidden">
+          <!--1st Modal-->
+          <div class="services__modal-wrap hidden" id="modal1">
             <div class="services__modal">
-              <div class="cross">
-                <div class="cross__line line1 close"></div>
-                <div class="cross__line line2 close"></div>
+              <div class="cross" data-target="modal1">
+                <div class="cross__line line1 "></div>
+                <div class="cross__line line2 "></div>
               </div>
               <div class="services__modal-column">
+                First
                 <h3>Diesel, EN 590 10 ppm</h3>
                 <p>
                   Diesel is a low emission/ environmentally clean diesel fuel
@@ -520,6 +522,107 @@
               </div>
             </div>
           </div>
+          <!--End of 1st modal-->
+          <!--Second modal-->
+          <div class="services__modal-wrap hidden" id="modal2">
+            <div class="services__modal">
+              <div class="cross" data-target="modal2">
+                <div class="cross__line line1 "></div>
+                <div class="cross__line line2 "></div>
+              </div>
+              <div class="services__modal-column">
+                Second
+                <h3>Diesel, EN 590 10 ppm</h3>
+                <p>
+                  Diesel is a low emission/ environmentally clean diesel fuel
+                  with a sulphur content less than 10 parts per million (ppm)
+                  which can be used in all diesel engines. It is especially
+                  suitable for diesel engines designed to meet the latest
+                  European and American emission standards.
+                </p>
+              </div>
+              <div class="services__modal-column">
+                <h3>Petrol</h3>
+                <p>
+                  We find the best quality gasolines (petrols) of all types:
+                </p>
+                <ul>
+                  <li> · Regular (the lowest octane fuel–generally 87)</li>
+                  <li>
+                    · Midgrade (the middle range octane fuel–generally 89–90)
+                  </li>
+                  <li>· Premium (the highest-octane fuel–generally 91–94)</li>
+                </ul>
+              </div>
+              <div class="services__modal-column">
+                <h3>Base Oil</h3>
+                <p>
+                  Offers customers Group I, Group II, and Group III base oils
+                  and Bright Stock sourced from a diverse array of refineries
+                  throughout the world.
+                </p>
+              </div>
+              <div class="services__modal-column">
+                <h3>LPG</h3>
+                <p>
+                  Liquefied petroleum gas, also referred to as simply propane or
+                  butane, are flammable mixtures of hydrocarbon gases used as
+                  fuel in heating appliances, cooking equipment, and vehicles.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--End of second modal-->
+          <!--3st modal-->
+          <div class="services__modal-wrap hidden" id="modal3">
+            <div class="services__modal">
+              <div class="cross" data-target="modal3">
+                <div class="cross__line line1 "></div>
+                <div class="cross__line line2 "></div>
+              </div>
+              <div class="services__modal-column">
+                Third
+                <h3>Diesel, EN 590 10 ppm</h3>
+                <p>
+                  Diesel is a low emission/ environmentally clean diesel fuel
+                  with a sulphur content less than 10 parts per million (ppm)
+                  which can be used in all diesel engines. It is especially
+                  suitable for diesel engines designed to meet the latest
+                  European and American emission standards.
+                </p>
+              </div>
+              <div class="services__modal-column">
+                <h3>Petrol</h3>
+                <p>
+                  We find the best quality gasolines (petrols) of all types:
+                </p>
+                <ul>
+                  <li> · Regular (the lowest octane fuel–generally 87)</li>
+                  <li>
+                    · Midgrade (the middle range octane fuel–generally 89–90)
+                  </li>
+                  <li>· Premium (the highest-octane fuel–generally 91–94)</li>
+                </ul>
+              </div>
+              <div class="services__modal-column">
+                <h3>Base Oil</h3>
+                <p>
+                  Offers customers Group I, Group II, and Group III base oils
+                  and Bright Stock sourced from a diverse array of refineries
+                  throughout the world.
+                </p>
+              </div>
+              <div class="services__modal-column">
+                <h3>LPG</h3>
+                <p>
+                  Liquefied petroleum gas, also referred to as simply propane or
+                  butane, are flammable mixtures of hydrocarbon gases used as
+                  fuel in heating appliances, cooking equipment, and vehicles.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--End of 3st modal-->
           <span class="services-blue-left slideInRight"></span>
           <div class="container">
             <div class="services__wrap">
@@ -574,21 +677,21 @@
                       <span>01</span>
                       <h3>Fuel and Oil</h3>
                     </div>
-                    <button class="btn-card modal-trigger">Our product list</button>
+                    <button class="btn-card modal-trigger" data-target="modal1">Our product list</button>
                   </div>
                   <div class="services__wrap-card tab-btn" data-btn="2">
                     <div class="services__wrap-card_top">
                       <span>02</span>
                       <h3>Fertilizers</h3>
                     </div>
-                    <button class="btn-card modal-trigger">Our product list</button>
+                    <button class="btn-card modal-trigger" data-target="modal2">Our product list</button>
                   </div>
                   <div class="services__wrap-card tab-btn" data-btn="3">
                     <div class="services__wrap-card_top">
                       <span>03</span>
                       <h3>PETROCHEMISTRY</h3>
                     </div>
-                    <button class="btn-card modal-trigger">Our product list</button>
+                    <button class="btn-card modal-trigger" data-target="modal3">Our product list</button>
                   </div>
                 </div>
                 <div id="contents">

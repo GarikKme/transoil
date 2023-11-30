@@ -279,19 +279,19 @@ const initAnimations = () => {
   };
 
   const initForm = () => {
-    const contacts = document.querySelector('#contacts');
-    const contactsTriger = document.querySelector('#contact-screen')
+    const contacts = document.querySelector("#contacts");
+    const contactsTriger = document.querySelector("#contact-screen");
     const isVisible = isInView(contactsTriger);
 
-    if(isVisible){
-      const slideInRight = contactsTriger.querySelectorAll('.slideInRight')
-      const slideInLeft = contactsTriger.querySelectorAll('.slideInLeft')
-      const number = contactsTriger.querySelector('.zoom-appear')
-      number.classList.add('visible')
-      slideInRight.forEach((slide) => slide.classList.add("visible"))
-      slideInLeft.forEach((slide) => slide.classList.add("visible"))
+    if (isVisible) {
+      const slideInRight = contactsTriger.querySelectorAll(".slideInRight");
+      const slideInLeft = contactsTriger.querySelectorAll(".slideInLeft");
+      const number = contactsTriger.querySelector(".zoom-appear");
+      number.classList.add("visible");
+      slideInRight.forEach((slide) => slide.classList.add("visible"));
+      slideInLeft.forEach((slide) => slide.classList.add("visible"));
     }
-  }
+  };
 
   initFadeUp();
   initAbout();
@@ -367,68 +367,63 @@ boxForm.addEventListener("submit", (e) => {
   sendData();
 });
 
-
 //modal window script
 
-const modal = document.querySelector('.services__modal-wrap')
-const modalTriggerButtons = document.querySelectorAll('.modal-trigger')
-const closeCross = document.querySelectorAll('.cross__line')
-const cross = document.querySelector('.cross')
+const modalTriggers = document.querySelectorAll(".modal-trigger");
+const modals = document.querySelectorAll(".services__modal-wrap");
 
-const openCross = () => {
-  closeCross.forEach((cross) => {
-    cross.classList.remove('close')
-  })
-}
+modalTriggers.forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    const targetModalId = trigger.getAttribute("data-target");
+    const targetModal = document.getElementById(targetModalId);
 
-const closeCrossHandler = () => {
-  closeCross.forEach((cross) => {
-    cross.classList.add('close')
-  })
-}
+    modals.forEach((modal) => {
+      modal.classList.add("hidden");
+    });
 
-modalTriggerButtons.forEach((button) => {    //open modal
-  button.addEventListener('click', () => {
-    modal.classList.remove('hidden')
-    document.querySelector('body').classList.add('pure')
-    setTimeout(openCross, 5)
+    targetModal.classList.remove("hidden");
+    body.classList.add('pure')
+  });
+  
+  const crosses = document.querySelectorAll(".cross");
+
+  crosses.forEach((cross) => {
+    cross.addEventListener("click", () => {
+      const targetModalId = cross.getAttribute("data-target");
+      const targetModal = document.getElementById(targetModalId);
+      targetModal.classList.add("hidden");
+      body.classList.remove('pure')
+    });
+  });
+});
+
+window.addEventListener("click", (e) => {
+  modals.forEach((modal) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+      body.classList.remove('pure')
+    }
+  });
+});
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    modals.forEach((modal) => {
+      modal.classList.add("hidden");
+      body.classList.remove('pure')
+    });
   }
-  )
-})
-
-const closeModal = () => {                   //close modal 
-  modal.classList.add('hidden')
-  closeCrossHandler()
-  document.querySelector('body').classList.remove('pure')
-  console.log('close modal')
-}
-
-cross.addEventListener('click', () => {
-  closeModal()
-})
-
-window.addEventListener('click', (e) => {
-  if(e.target === modal){
-    closeModal()
-    console.log('close')
-  }
-})
-
-window.addEventListener('keydown', (e) => {
-  if(e.key === 'Escape'){
-    closeModal()
-  }
-})
+});
 
 //end of modal window script
 
 //contact form script
 
-const contactInputs = document.querySelectorAll('.contact__input')
-const contactForm = document.querySelector('.contact__form')
+const contactInputs = document.querySelectorAll(".contact__input");
+const contactForm = document.querySelector(".contact__form");
 
-contactForm.addEventListener('submit', (e) => {
-  e.preventDefault()
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault();
 
   // const sendData = async () => {
   //   await fetch("message.php", {
@@ -440,9 +435,6 @@ contactForm.addEventListener('submit', (e) => {
   //     }),
   //   });
   // }
-
-})
+});
 
 //end of contact form script
-
-
