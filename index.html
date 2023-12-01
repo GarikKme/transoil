@@ -475,7 +475,7 @@
         <section class="services" id="services">
           <!--1st Modal-->
           <div class="services__modal-wrap hidden" id="modal1">
-            <div class="services__modal">
+            <div class="services__modal" id="modal-window1">
               <div class="cross" data-target="modal1">
                 <div class="cross__line line1"></div>
                 <div class="cross__line line2"></div>
@@ -492,15 +492,15 @@
               </div>
               <div class="services__modal-column">
                 <h3>Petrol</h3>
-                <p>
+                <span>
                   We find the best quality gasolines (petrols) of all types:
-                </p>
+                </span>
                 <ul>
-                  <li>· Regular (the lowest octane fuel–generally 87)</li>
+                  <li><span>&#8226</span> Regular (the lowest octane fuel–generally 87)</li>
                   <li>
-                    · Midgrade (the middle range octane fuel–generally 89–90)
+                    <span>&#8226</span> Midgrade (the middle range octane fuel–generally 89–90)
                   </li>
-                  <li>· Premium (the highest-octane fuel–generally 91–94)</li>
+                  <li><span>&#8226</span> Premium (the highest-octane fuel–generally 91–94)</li>
                 </ul>
               </div>
               <div class="services__modal-column">
@@ -524,7 +524,7 @@
           <!--End of 1st modal-->
           <!--Second modal-->
           <div class="services__modal-wrap hidden" id="modal2">
-            <div class="services__modal">
+            <div class="services__modal" id="modal-window2">
               <div class="cross" data-target="modal2">
                 <div class="cross__line line1"></div>
                 <div class="cross__line line2"></div>
@@ -541,8 +541,7 @@
                 </p>
               </div>
               <div class="services__modal-column">
-                <h3>Petrol</h3>
-                <p>Ammonium Nitrate</p>
+                <h3>Ammonium Nitrate</h3>
                 <p>
                   Ammonium nitrate, (NH4NO3), a salt of ammonia and nitric acid,
                   used widely in fertilizers and explosives. The commercial
@@ -575,12 +574,13 @@
                   specific crop or parcel of land. The global demand for NPKs is
                   estimated to be about 20 million tons a year.
                 </p>
+                <span>Our list of NPK formulas:</span>
                 <ul>
-                  <li>· NPK 15-15-15</li>
-                  <li>· NPK 15-10-10</li>
-                  <li>· NPK 10-10-20</li>
-                  <li>· NPK 6-20-10</li>
-                  <li>· NPK 8-20-30</li>
+                  <li><span>&#8226</span> NPK 15-15-15</li>
+                  <li><span>&#8226</span> NPK 15-10-10</li>
+                  <li><span>&#8226</span> NPK 10-10-20</li>
+                  <li><span>&#8226</span> NPK 6-20-10</li>
+                  <li><span>&#8226</span> NPK 8-20-30</li>
                 </ul>
                 <p>
                   Please note: our company can make a formula you want to have.
@@ -606,7 +606,7 @@
           <!--End of second modal-->
           <!--3st modal-->
           <div class="services__modal-wrap hidden" id="modal3">
-            <div class="services__modal">
+            <div class="services__modal" id="modal-window3">
               <div class="cross" data-target="modal3">
                 <div class="cross__line line1"></div>
                 <div class="cross__line line2"></div>
@@ -831,7 +831,7 @@
                         <span>01</span>
                         <h3>Fuel and Oil</h3>
                       </div>
-                      <button class="btn-card modal-trigger">
+                      <button class="btn-card modal-trigger" data-target="modal1">
                         Our product list
                       </button>
                     </div>
@@ -887,7 +887,7 @@
                         <span>02</span>
                         <h3>Fertilizers</h3>
                       </div>
-                      <button class="btn-card modal-trigger">
+                      <button class="btn-card modal-trigger" data-target="modal2">
                         Our product list
                       </button>
                     </div>
@@ -943,7 +943,7 @@
                         <span>01</span>
                         <h3>PETROCHEMISTRY</h3>
                       </div>
-                      <button class="btn-card modal-trigger">
+                      <button class="btn-card modal-trigger" data-target="modal3">
                         Our product list
                       </button>
                     </div>
@@ -1096,6 +1096,11 @@
 
         <!-- Contact form-->
         <section class="contact" id="contact-screen">
+          <img
+            id="form-bg"
+            class="zoomDown visible"
+            src="/src/images/track2.png"
+          />
           <div class="container">
             <div class="contact__tittle-wrapper">
               <h2 class="contact__tittle slideInRight">CONTACT</h2>
@@ -1112,23 +1117,7 @@
                   <div class="contact__single-person">
                     <div class="contact__column">
                       <span>Mr. Dainius Batrys</span>
-                      <div class="contact__phone-number">
-                        <svg
-                          width="25"
-                          height="25"
-                          viewBox="0 0 25 25"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M12.5 0C5.59644 0 0 5.59644 0 12.5C0 19.4036 5.59644 25 12.5 25C19.4036 25 25 19.4036 25 12.5C25 5.59644 19.4036 0 12.5 0ZM8.00781 4.96521C8.26535 4.95002 8.49815 5.10396 8.67463 5.37719L10.3836 8.61815C10.5635 9.00219 10.4613 9.4134 10.1929 9.68779L9.4101 10.4706C9.36179 10.5368 9.33 10.6113 9.32923 10.6933C9.62942 11.8553 10.54 12.9271 11.3434 13.6642C12.1468 14.4013 13.0103 15.3993 14.1312 15.6357C14.2697 15.6743 14.4394 15.6882 14.5386 15.596L15.448 14.6698C15.7619 14.4319 16.216 14.3166 16.5512 14.5111H16.5665L19.6502 16.3315C20.1029 16.6152 20.1498 17.1637 19.8257 17.4973L17.7017 19.6045C17.3881 19.9262 16.9714 20.0343 16.5665 20.0348C14.7759 19.9811 13.084 19.1023 11.6944 18.1992C9.41333 16.5397 7.32098 14.4815 6.0074 11.9949C5.5036 10.9522 4.91179 9.62181 4.96827 8.45798C4.97331 8.02015 5.09177 7.59121 5.4001 7.309L7.52413 5.18498C7.68958 5.04419 7.85327 4.97433 8.00781 4.96521Z"
-                            fill="#0070C1"
-                          />
-                        </svg>
-                        <div>+37068672657</div>
-                      </div>
-                    </div>
-                    <div class="contact__column">
+
                       <div class="contact__mail-wrap">
                         <svg
                           width="25"
@@ -1150,6 +1139,23 @@
                         </svg>
                         <a href="mailto:info@transoila.lt">info@transoila.lt</a>
                       </div>
+                    </div>
+                    <div class="contact__column">
+                      <div class="contact__phone-number">
+                        <svg
+                          width="25"
+                          height="25"
+                          viewBox="0 0 25 25"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12.5 0C5.59644 0 0 5.59644 0 12.5C0 19.4036 5.59644 25 12.5 25C19.4036 25 25 19.4036 25 12.5C25 5.59644 19.4036 0 12.5 0ZM8.00781 4.96521C8.26535 4.95002 8.49815 5.10396 8.67463 5.37719L10.3836 8.61815C10.5635 9.00219 10.4613 9.4134 10.1929 9.68779L9.4101 10.4706C9.36179 10.5368 9.33 10.6113 9.32923 10.6933C9.62942 11.8553 10.54 12.9271 11.3434 13.6642C12.1468 14.4013 13.0103 15.3993 14.1312 15.6357C14.2697 15.6743 14.4394 15.6882 14.5386 15.596L15.448 14.6698C15.7619 14.4319 16.216 14.3166 16.5512 14.5111H16.5665L19.6502 16.3315C20.1029 16.6152 20.1498 17.1637 19.8257 17.4973L17.7017 19.6045C17.3881 19.9262 16.9714 20.0343 16.5665 20.0348C14.7759 19.9811 13.084 19.1023 11.6944 18.1992C9.41333 16.5397 7.32098 14.4815 6.0074 11.9949C5.5036 10.9522 4.91179 9.62181 4.96827 8.45798C4.97331 8.02015 5.09177 7.59121 5.4001 7.309L7.52413 5.18498C7.68958 5.04419 7.85327 4.97433 8.00781 4.96521Z"
+                            fill="#0070C1"
+                          />
+                        </svg>
+                        <a href="tel:+37068672657">+37068672657</a>
+                      </div>
                       <div>
                         <svg
                           width="25"
@@ -1169,23 +1175,6 @@
                   <div class="contact__single-person">
                     <div class="contact__column">
                       <span>Mr. Vadimas Sislovas</span>
-                      <div class="contact__phone-number">
-                        <svg
-                          width="25"
-                          height="25"
-                          viewBox="0 0 25 25"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M12.5 0C5.59644 0 0 5.59644 0 12.5C0 19.4036 5.59644 25 12.5 25C19.4036 25 25 19.4036 25 12.5C25 5.59644 19.4036 0 12.5 0ZM8.00781 4.96521C8.26535 4.95002 8.49815 5.10396 8.67463 5.37719L10.3836 8.61815C10.5635 9.00219 10.4613 9.4134 10.1929 9.68779L9.4101 10.4706C9.36179 10.5368 9.33 10.6113 9.32923 10.6933C9.62942 11.8553 10.54 12.9271 11.3434 13.6642C12.1468 14.4013 13.0103 15.3993 14.1312 15.6357C14.2697 15.6743 14.4394 15.6882 14.5386 15.596L15.448 14.6698C15.7619 14.4319 16.216 14.3166 16.5512 14.5111H16.5665L19.6502 16.3315C20.1029 16.6152 20.1498 17.1637 19.8257 17.4973L17.7017 19.6045C17.3881 19.9262 16.9714 20.0343 16.5665 20.0348C14.7759 19.9811 13.084 19.1023 11.6944 18.1992C9.41333 16.5397 7.32098 14.4815 6.0074 11.9949C5.5036 10.9522 4.91179 9.62181 4.96827 8.45798C4.97331 8.02015 5.09177 7.59121 5.4001 7.309L7.52413 5.18498C7.68958 5.04419 7.85327 4.97433 8.00781 4.96521Z"
-                            fill="#0070C1"
-                          />
-                        </svg>
-                        <div>+37061818492</div>
-                      </div>
-                    </div>
-                    <div class="contact__column">
                       <div class="contact__mail-wrap">
                         <svg
                           width="25"
@@ -1206,6 +1195,23 @@
                           />
                         </svg>
                         <a href="mailto:vs@transoila.lt">vs@transoila.lt</a>
+                      </div>
+                    </div>
+                    <div class="contact__column">
+                      <div class="contact__phone-number">
+                        <svg
+                          width="25"
+                          height="25"
+                          viewBox="0 0 25 25"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12.5 0C5.59644 0 0 5.59644 0 12.5C0 19.4036 5.59644 25 12.5 25C19.4036 25 25 19.4036 25 12.5C25 5.59644 19.4036 0 12.5 0ZM8.00781 4.96521C8.26535 4.95002 8.49815 5.10396 8.67463 5.37719L10.3836 8.61815C10.5635 9.00219 10.4613 9.4134 10.1929 9.68779L9.4101 10.4706C9.36179 10.5368 9.33 10.6113 9.32923 10.6933C9.62942 11.8553 10.54 12.9271 11.3434 13.6642C12.1468 14.4013 13.0103 15.3993 14.1312 15.6357C14.2697 15.6743 14.4394 15.6882 14.5386 15.596L15.448 14.6698C15.7619 14.4319 16.216 14.3166 16.5512 14.5111H16.5665L19.6502 16.3315C20.1029 16.6152 20.1498 17.1637 19.8257 17.4973L17.7017 19.6045C17.3881 19.9262 16.9714 20.0343 16.5665 20.0348C14.7759 19.9811 13.084 19.1023 11.6944 18.1992C9.41333 16.5397 7.32098 14.4815 6.0074 11.9949C5.5036 10.9522 4.91179 9.62181 4.96827 8.45798C4.97331 8.02015 5.09177 7.59121 5.4001 7.309L7.52413 5.18498C7.68958 5.04419 7.85327 4.97433 8.00781 4.96521Z"
+                            fill="#0070C1"
+                          />
+                        </svg>
+                        <a href="tel:+37061818492">+37061818492</a>
                       </div>
                       <div class="contact__linked-wrap">
                         <svg
@@ -1232,23 +1238,6 @@
                   <div class="contact__single-person">
                     <div class="contact__column">
                       <span>Mr. Vadimas Sislovas</span>
-                      <div class="contact__phone-number">
-                        <svg
-                          width="25"
-                          height="25"
-                          viewBox="0 0 25 25"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M12.5 0C5.59644 0 0 5.59644 0 12.5C0 19.4036 5.59644 25 12.5 25C19.4036 25 25 19.4036 25 12.5C25 5.59644 19.4036 0 12.5 0ZM8.00781 4.96521C8.26535 4.95002 8.49815 5.10396 8.67463 5.37719L10.3836 8.61815C10.5635 9.00219 10.4613 9.4134 10.1929 9.68779L9.4101 10.4706C9.36179 10.5368 9.33 10.6113 9.32923 10.6933C9.62942 11.8553 10.54 12.9271 11.3434 13.6642C12.1468 14.4013 13.0103 15.3993 14.1312 15.6357C14.2697 15.6743 14.4394 15.6882 14.5386 15.596L15.448 14.6698C15.7619 14.4319 16.216 14.3166 16.5512 14.5111H16.5665L19.6502 16.3315C20.1029 16.6152 20.1498 17.1637 19.8257 17.4973L17.7017 19.6045C17.3881 19.9262 16.9714 20.0343 16.5665 20.0348C14.7759 19.9811 13.084 19.1023 11.6944 18.1992C9.41333 16.5397 7.32098 14.4815 6.0074 11.9949C5.5036 10.9522 4.91179 9.62181 4.96827 8.45798C4.97331 8.02015 5.09177 7.59121 5.4001 7.309L7.52413 5.18498C7.68958 5.04419 7.85327 4.97433 8.00781 4.96521Z"
-                            fill="#0070C1"
-                          />
-                        </svg>
-                        <div>+37061818492</div>
-                      </div>
-                    </div>
-                    <div class="contact__column">
                       <div class="contact__mail-wrap">
                         <svg
                           width="25"
@@ -1270,6 +1259,23 @@
                         </svg>
                         <a href="mailto:vs@transoila.lt">vs@transoila.lt</a>
                       </div>
+                    </div>
+                    <div class="contact__column">
+                      <div class="contact__phone-number">
+                        <svg
+                          width="25"
+                          height="25"
+                          viewBox="0 0 25 25"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12.5 0C5.59644 0 0 5.59644 0 12.5C0 19.4036 5.59644 25 12.5 25C19.4036 25 25 19.4036 25 12.5C25 5.59644 19.4036 0 12.5 0ZM8.00781 4.96521C8.26535 4.95002 8.49815 5.10396 8.67463 5.37719L10.3836 8.61815C10.5635 9.00219 10.4613 9.4134 10.1929 9.68779L9.4101 10.4706C9.36179 10.5368 9.33 10.6113 9.32923 10.6933C9.62942 11.8553 10.54 12.9271 11.3434 13.6642C12.1468 14.4013 13.0103 15.3993 14.1312 15.6357C14.2697 15.6743 14.4394 15.6882 14.5386 15.596L15.448 14.6698C15.7619 14.4319 16.216 14.3166 16.5512 14.5111H16.5665L19.6502 16.3315C20.1029 16.6152 20.1498 17.1637 19.8257 17.4973L17.7017 19.6045C17.3881 19.9262 16.9714 20.0343 16.5665 20.0348C14.7759 19.9811 13.084 19.1023 11.6944 18.1992C9.41333 16.5397 7.32098 14.4815 6.0074 11.9949C5.5036 10.9522 4.91179 9.62181 4.96827 8.45798C4.97331 8.02015 5.09177 7.59121 5.4001 7.309L7.52413 5.18498C7.68958 5.04419 7.85327 4.97433 8.00781 4.96521Z"
+                            fill="#0070C1"
+                          />
+                        </svg>
+                        <a href="tel:+37061818492">+37061818492</a>
+                      </div>
                       <div>
                         <svg
                           width="25"
@@ -1289,23 +1295,7 @@
                   <div class="contact__single-person">
                     <div class="contact__column">
                       <span>Mr. Rafal Kozenevskij</span>
-                      <div class="contact__phone-number">
-                        <svg
-                          width="25"
-                          height="25"
-                          viewBox="0 0 25 25"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M12.5 0C5.59644 0 0 5.59644 0 12.5C0 19.4036 5.59644 25 12.5 25C19.4036 25 25 19.4036 25 12.5C25 5.59644 19.4036 0 12.5 0ZM8.00781 4.96521C8.26535 4.95002 8.49815 5.10396 8.67463 5.37719L10.3836 8.61815C10.5635 9.00219 10.4613 9.4134 10.1929 9.68779L9.4101 10.4706C9.36179 10.5368 9.33 10.6113 9.32923 10.6933C9.62942 11.8553 10.54 12.9271 11.3434 13.6642C12.1468 14.4013 13.0103 15.3993 14.1312 15.6357C14.2697 15.6743 14.4394 15.6882 14.5386 15.596L15.448 14.6698C15.7619 14.4319 16.216 14.3166 16.5512 14.5111H16.5665L19.6502 16.3315C20.1029 16.6152 20.1498 17.1637 19.8257 17.4973L17.7017 19.6045C17.3881 19.9262 16.9714 20.0343 16.5665 20.0348C14.7759 19.9811 13.084 19.1023 11.6944 18.1992C9.41333 16.5397 7.32098 14.4815 6.0074 11.9949C5.5036 10.9522 4.91179 9.62181 4.96827 8.45798C4.97331 8.02015 5.09177 7.59121 5.4001 7.309L7.52413 5.18498C7.68958 5.04419 7.85327 4.97433 8.00781 4.96521Z"
-                            fill="#0070C1"
-                          />
-                        </svg>
-                        <div>+37061300550</div>
-                      </div>
-                    </div>
-                    <div class="contact__column">
+
                       <div class="contact__mail-wrap">
                         <svg
                           width="25"
@@ -1326,6 +1316,23 @@
                           />
                         </svg>
                         <a href="mailto:rk@transoila.lt">rk@transoila.lt</a>
+                      </div>
+                    </div>
+                    <div class="contact__column">
+                      <div class="contact__phone-number">
+                        <svg
+                          width="25"
+                          height="25"
+                          viewBox="0 0 25 25"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12.5 0C5.59644 0 0 5.59644 0 12.5C0 19.4036 5.59644 25 12.5 25C19.4036 25 25 19.4036 25 12.5C25 5.59644 19.4036 0 12.5 0ZM8.00781 4.96521C8.26535 4.95002 8.49815 5.10396 8.67463 5.37719L10.3836 8.61815C10.5635 9.00219 10.4613 9.4134 10.1929 9.68779L9.4101 10.4706C9.36179 10.5368 9.33 10.6113 9.32923 10.6933C9.62942 11.8553 10.54 12.9271 11.3434 13.6642C12.1468 14.4013 13.0103 15.3993 14.1312 15.6357C14.2697 15.6743 14.4394 15.6882 14.5386 15.596L15.448 14.6698C15.7619 14.4319 16.216 14.3166 16.5512 14.5111H16.5665L19.6502 16.3315C20.1029 16.6152 20.1498 17.1637 19.8257 17.4973L17.7017 19.6045C17.3881 19.9262 16.9714 20.0343 16.5665 20.0348C14.7759 19.9811 13.084 19.1023 11.6944 18.1992C9.41333 16.5397 7.32098 14.4815 6.0074 11.9949C5.5036 10.9522 4.91179 9.62181 4.96827 8.45798C4.97331 8.02015 5.09177 7.59121 5.4001 7.309L7.52413 5.18498C7.68958 5.04419 7.85327 4.97433 8.00781 4.96521Z"
+                            fill="#0070C1"
+                          />
+                        </svg>
+                        <a href="tel:+37061300550">+37061300550</a>
                       </div>
                       <div class="contact__linked-wrap">
                         <svg
@@ -1387,7 +1394,7 @@
                             fill="#0070C1"
                           />
                         </svg>
-                        <div>+37068891999</div>
+                        <a href="tel:+37068891999">+37068891999</a>
                       </div>
                       <div>
                         <svg
@@ -1408,11 +1415,11 @@
                 </div>
               </div>
               <div class="contact__form-wrapper">
-                <img
+                <!-- <img
                   id="form-bg"
                   class="zoomDown visible"
                   src="/src/images/track2.png"
-                />
+                /> -->
                 <form class="contact__form slideInLeft">
                   <div class="contact__input-wrap">
                     <label for="name">Name</label>
@@ -1437,13 +1444,13 @@
                     />
                   </div>
                   <div class="contact__input-wrap">
-                    <label for="messagge">Type in your messagge</label>
+                    <label for="messagge">Type in your message</label>
                     <textarea
                       class="contact__input"
                       required
                       id="messagge"
                       resize="none"
-                      placeholder="Enter your messagge
+                      placeholder="Enter your message
                     "
                     ></textarea>
                   </div>
