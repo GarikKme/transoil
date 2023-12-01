@@ -5,6 +5,9 @@
   position: absolute;
   right: 25px;
   top: 25px;
+  &:hover{
+    cursor: pointer;
+  }
   &__line{
     position: absolute;
     width: 100%;
@@ -102,6 +105,9 @@
     gap: 10px;
     span{
       font-weight: 700;
+    }
+    ul{
+      margin-left: 10px;
     }
   }
   @media screen and (max-width:670px),(max-height:700px) {
