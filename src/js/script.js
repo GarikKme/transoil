@@ -384,7 +384,7 @@ modalTriggers.forEach((trigger) => {
     targetModal.classList.remove("hidden");
     body.classList.add('pure')
   });
-  
+
   const crosses = document.querySelectorAll(".cross");
 
   crosses.forEach((cross) => {
@@ -421,9 +421,16 @@ window.addEventListener("keydown", (e) => {
 
 const contactInputs = document.querySelectorAll(".contact__input");
 const contactForm = document.querySelector(".contact__form");
+const clearFields = () => {
+  contactInputs.forEach((input) => {
+    input.value = ''
+  })
+}
 
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
+
+  clearFields()
 
   // const sendData = async () => {
   //   await fetch("message.php", {

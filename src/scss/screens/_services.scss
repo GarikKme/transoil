@@ -40,6 +40,11 @@
     display: none;
   }
   //modal window
+  #modal3{
+    height: fit-content !important;
+    transform: translateY(0%);
+    transform: translateX(-50%);
+  }
   &__modal-wrap{
     width: 100vw;
     height: 100vh;
@@ -63,9 +68,10 @@
     gap: 20px;
     border-radius: 12px;
     height: 90%;
-    max-height: 735px;
+    max-height: 1171px;
     width: 90%;
     max-width: 618px;
+    overflow: scroll;
     h3{
       color: #008CCF;
       font-family: Exo\ 2;
