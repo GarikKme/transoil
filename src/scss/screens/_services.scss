@@ -437,6 +437,9 @@
       font-size: 16px;
       font-weight: 700;
       line-height: 32px;
+      &:hover{
+        cursor: pointer;
+      }
       @media screen and (max-width: 1290px) {
         font-size: 15px;
       }
@@ -502,8 +505,8 @@
     line-height: 25px;
 
     &.active {
-      padding-top: 26px;
-      max-height: 40em;
+      padding-top: 21px;
+      max-height: 48em;
       padding-bottom: 54px;
       opacity: 1;
     }
