@@ -320,8 +320,6 @@ const thanks = document.querySelector(".thx");
 const inputs = boxModal.querySelectorAll(".box-input");
 const boxForm = document.querySelector("#boxForm");
 
-console.log(boxForm);
-
 btnsOpenModal.forEach((item) => {
   item.addEventListener("click", (e) => {
     e.preventDefault();
