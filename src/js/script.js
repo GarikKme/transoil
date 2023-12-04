@@ -382,7 +382,7 @@ modalTriggers.forEach((trigger) => {
     });
 
     targetModal.classList.remove("hidden");
-    body.classList.add('pure')
+    body.classList.add("pure");
   });
 
   const crosses = document.querySelectorAll(".cross");
@@ -392,7 +392,7 @@ modalTriggers.forEach((trigger) => {
       const targetModalId = cross.getAttribute("data-target");
       const targetModal = document.getElementById(targetModalId);
       targetModal.classList.add("hidden");
-      body.classList.remove('pure')
+      body.classList.remove("pure");
     });
   });
 });
@@ -401,7 +401,7 @@ window.addEventListener("click", (e) => {
   modals.forEach((modal) => {
     if (e.target === modal) {
       modal.classList.add("hidden");
-      body.classList.remove('pure')
+      body.classList.remove("pure");
     }
   });
 });
@@ -410,7 +410,7 @@ window.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     modals.forEach((modal) => {
       modal.classList.add("hidden");
-      body.classList.remove('pure')
+      body.classList.remove("pure");
     });
   }
 });
@@ -423,25 +423,29 @@ const contactInputs = document.querySelectorAll(".contact__input");
 const contactForm = document.querySelector(".contact__form");
 const clearFields = () => {
   contactInputs.forEach((input) => {
-    input.value = ''
-  })
-}
+    input.value = "";
+  });
+};
 
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  clearFields()
+  clearFields();
 
-  // const sendData = async () => {
-  //   await fetch("message.php", {
-  //     method: "POST",
-  //     body: JSON.stringify({
-  //       name: contactInputs[0].value,
-  //       email: contactInputs[1].value,
-  //       message: contactInputs[2].value,
-  //     }),
-  //   });
-  // }
+  const formData = new FormData();
+
+  formData.append("name", contactInputs[0].value);
+  formData.append("email", contactInputs[1].value);
+  formData.append("message", contactInputs[2].value);
+
+  const sendData = async () => {
+    await fetch("/components/sendmail/contact.php", {
+      method: "POST",
+      body: formData,
+    });
+  };
+
+  sendData();
 });
 
 //end of contact form script
