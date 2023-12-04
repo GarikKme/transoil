@@ -437,7 +437,7 @@ contactForm.addEventListener("submit", (e) => {
   formData.append("message", contactInputs[2].value);
 
   const sendData = async () => {
-    await fetch("/components/sendmail/contact.php", {
+    await fetch("/contact.php", {
       method: "POST",
       body: formData,
     });
